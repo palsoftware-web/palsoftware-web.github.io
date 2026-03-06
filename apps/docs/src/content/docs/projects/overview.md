@@ -12,6 +12,12 @@ description: High-level map of apps and packages in this monorepo.
 
 Generated device mockups are stored under `/showcase/generated/`.
 
+## Pastiera Documentation Status
+
+- [Pastiera Feature Audit](/projects/pastiera-feature-audit/)
+- [Pastiera Documentation Plan](/projects/pastiera-doc-plan/)
+- [Screenshot Backlog](/guides/screenshot-backlog/)
+
 ## Packages
 
 - Add shared libraries from `packages/*` here.

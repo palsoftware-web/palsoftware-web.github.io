@@ -1,0 +1,38 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface Props {
+  id: string;
+  alt: string;
+  caption?: string;
+}
+
+const { id, alt, caption } = Astro.props as Props;
+const currentLocale = (Astro.currentLocale || 'en').toLowerCase();
+const normalizedLocale = currentLocale.split('-')[0] || 'en';
+
+const candidates = [
+  { locale: normalizedLocale, src: `/showcase/screenshots/${normalizedLocale}/${id}.png` },
+  { locale: 'en', src: `/showcase/screenshots/en/${id}.png` }
+];
+
+const publicDir = path.join(process.cwd(), 'public');
+const resolved = candidates.find((candidate) =>
+  fs.existsSync(path.join(publicDir, candidate.src.replace(/^\//, '')))
+);
+---
+
+{resolved ? (
+  <figure>
+    <img src={resolved.src} alt={alt} loading="lazy" />
+    <figcaption>
+      {caption || alt} ({resolved.locale === normalizedLocale ? `locale: ${resolved.locale}` : `fallback: en`})
+    </figcaption>
+  </figure>
+) : (
+  <div style="border: 1px solid #d0d7de; padding: 0.9rem; border-radius: 0.5rem; background: #f6f8fa;">
+    <strong>Screenshot missing:</strong> <code>{id}</code>
+    <p style="margin: 0.5rem 0 0;">Expected at <code>/showcase/screenshots/{normalizedLocale}/{id}.png</code> or fallback <code>/showcase/screenshots/en/{id}.png</code>.</p>
+  </div>
+)}

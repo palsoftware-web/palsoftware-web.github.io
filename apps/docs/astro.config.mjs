@@ -8,6 +8,11 @@ export default defineConfig({
     starlight({
       title: 'Pastiera',
       description: 'Project overview, FAQ, and implementation guides.',
+      locales: {
+        root: { label: 'English', lang: 'en' },
+        de: { label: 'Deutsch', lang: 'de' }
+      },
+      defaultLocale: 'root',
       social: {
         github: 'https://github.com/palsoftware'
       }

@@ -1,0 +1,52 @@
+---
+title: Emoji Search
+description: How emoji search works in Pastiera and where to configure it.
+---
+
+import LocalizedScreenshot from '../../../components/LocalizedScreenshot.astro';
+
+Last reviewed: 2026-03-06
+
+## Scope
+
+Pastiera supports emoji search in two places:
+
+1. Settings emoji picker (customization flow)
+2. Inline emoji picker opened from SYM pages
+
+## User behavior
+
+1. Open an emoji picker.
+2. Type a query using the hardware keyboard.
+3. Results are matched across emoji names and keywords.
+4. Clearing the query returns category browsing.
+
+## Language behavior
+
+- Search data is local/offline.
+- Current bundled locale files include: `en`, `de`, `es`, `fr`, `hy`, `it`, `pl`, `ru`, `uk`.
+- Fallback behavior uses English when no locale-specific terms are available.
+
+## Inline picker key routing
+
+- When inline picker search capture is active, hardware typing is routed into search.
+- Typing is prevented from leaking into the target app text field.
+- Tapping or moving cursor in app text fields disables capture and returns normal typing.
+
+## Screenshot
+
+<LocalizedScreenshot
+  id="emoji-search-inline"
+  alt="Inline emoji search in Pastiera"
+  caption="Inline emoji search"
+/>
+
+## References
+
+- Feature PR: [#141](https://github.com/palsoftware/pastiera/pull/141)
+- Related issue: [#37](https://github.com/palsoftware/pastiera/issues/37)
+- Key commits:
+  - `6893660bd318741fd7f54cb7c7c5e58aaf782dee`
+  - `18b96fa23101ae83cb22fdfe902f12a61389ab94`
+  - `88b64ddc3e11092a968e079b1ac95debf6a4e8ba`
+  - `404a1b177e8685d3ad97ee0162330f340ba67544`

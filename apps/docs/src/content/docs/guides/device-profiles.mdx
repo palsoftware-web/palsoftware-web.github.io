@@ -1,0 +1,48 @@
+---
+title: Device Profiles
+description: Device-specific support notes (Titan2, Q25) and compatibility guidance.
+---
+
+import LocalizedScreenshot from '../../../components/LocalizedScreenshot.astro';
+
+Last reviewed: 2026-03-06
+
+## Scope
+
+Pastiera targets physical-keyboard Android devices with profile-specific behavior where needed.
+
+## Titan2 baseline
+
+- Primary development and validation target in historical releases.
+- Includes device-specific key mapping support and nav-mode workflows.
+
+## Q25 support
+
+- Dedicated support merged in PR [#146](https://github.com/palsoftware/pastiera/pull/146).
+- This is recent and should be treated as actively stabilizing.
+
+## Screenshot
+
+<LocalizedScreenshot
+  id="device-profile-q25"
+  alt="Q25 profile-related settings"
+  caption="Q25 profile"
+/>
+
+## Compatibility note
+
+- Some feature requests are blocked by platform/device constraints (example context: BFU state discussion in [#149](https://github.com/palsoftware/pastiera/issues/149)).
+
+## Suggested test matrix
+
+1. Core typing/modifier flow
+2. SYM and variations behavior
+3. Nav mode and shortcuts
+4. Clipboard and emoji picker interactions
+5. Backup/restore cycle
+
+## References
+
+- Q25 support PR: [#146](https://github.com/palsoftware/pastiera/pull/146)
+- Ukrainian layout PR: [#105](https://github.com/palsoftware/pastiera/pull/105)
+- Serbian Cyrillic layout PR: [#130](https://github.com/palsoftware/pastiera/pull/130)

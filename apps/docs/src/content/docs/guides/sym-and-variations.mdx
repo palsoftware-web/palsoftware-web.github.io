@@ -1,0 +1,59 @@
+---
+title: SYM and Variations
+description: Behavior model for SYM pages, variations bar, and related customization.
+---
+
+import LocalizedScreenshot from '../../../components/LocalizedScreenshot.astro';
+
+Last reviewed: 2026-03-06
+
+## Scope
+
+This page tracks user-visible behavior for:
+
+- SYM pages (emoji/symbol surfaces)
+- Variations bar (dynamic/static variants)
+- Related customization and lock/trigger options
+
+## SYM behavior baseline
+
+1. SYM can expose emoji and symbols pages.
+2. Page availability/order is configurable.
+3. Recent iterations added custom unicode input paths and improved picker controls.
+
+## Variations baseline
+
+1. Variations bar can show contextual variants for recently typed characters.
+2. Static variant sets are possible for utility-heavy flows.
+3. Layout and button interactions are influenced by status bar configuration.
+
+## Screenshot
+
+<LocalizedScreenshot
+  id="sym-variations-overview"
+  alt="SYM and variations area"
+  caption="SYM and variations overview"
+/>
+
+## Known evolution points
+
+- Long-press/lock semantics and release timing have been adjusted across issues and commits.
+- Emoji access methods and picker entry points changed during 2026 feature work.
+
+## Configuration checks
+
+1. Verify enabled SYM pages and ordering.
+2. Verify static/dynamic variation options.
+3. Verify interaction with status bar and hamburger menu where enabled.
+4. Re-test behavior after importing custom layout/symbol configs.
+
+## References
+
+- Issues:
+  - [#27](https://github.com/palsoftware/pastiera/issues/27)
+  - [#127](https://github.com/palsoftware/pastiera/issues/127)
+  - [#106](https://github.com/palsoftware/pastiera/issues/106)
+  - [#59](https://github.com/palsoftware/pastiera/issues/59)
+- Related docs in reference repo:
+  - `docs/status_bar_buttons.md`
+  - `docs/hamburger_menu.md`
