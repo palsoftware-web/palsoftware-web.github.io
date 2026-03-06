@@ -1,0 +1,4 @@
+node_modules/
+.DS_Store
+apps/docs/dist/
+apps/docs/.astro/

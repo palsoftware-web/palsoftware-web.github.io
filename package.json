@@ -1,0 +1,15 @@
+{
+  "name": "pastiera-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "docs:dev": "npm --workspace @pastiera/docs run dev",
+    "docs:build": "npm --workspace @pastiera/docs run build",
+    "docs:preview": "npm --workspace @pastiera/docs run preview",
+    "docs:images": "npm --workspace @pastiera/docs run images"
+  }
+}
