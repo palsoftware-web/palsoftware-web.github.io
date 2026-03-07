@@ -18,6 +18,14 @@ Generated device mockups are stored under `/showcase/generated/`.
 - [Pastiera Documentation Plan](/projects/pastiera-doc-plan/)
 - [Screenshot Backlog](/guides/screenshot-backlog/)
 
+## Pastiera Release Channels
+
+- Stable release channel: official signed release builds.
+- GitHub Nightly channel: timestamped pre-releases under `nightly/v*`.
+- Nightly F-Droid repo: [`https://pastiera.eu/fdroid/nightly/repo`](https://pastiera.eu/fdroid/nightly/repo)
+
+Nightly version names follow `BASE-nightly.YYYYMMDD.HHMMSS`, for example `0.85-nightly.20260307.005731`.
+
 ## Packages
 
 - Add shared libraries from `packages/*` here.
