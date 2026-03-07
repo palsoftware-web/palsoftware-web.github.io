@@ -1,0 +1,84 @@
+---
+title: Languages and Layouts
+description: Built-in layouts, custom input styles, and how Pastiera handles languages.
+---
+
+## Included layout support
+
+Pastiera ships with built-in layout mappings and language support beyond plain qwerty. The current app assets include layouts such as:
+
+- qwerty
+- azerty
+- qwertz
+- greek
+- arabic
+- ukrainian
+- serbian cyrillic
+- german multitap qwertz
+- vietnamese telex qwerty
+- phonetic or transliteration-oriented layouts for several languages
+
+Support also depends on dictionaries and subtypes, so a layout may exist even when suggestion support is more limited.
+
+## Languages and Maps
+
+Use `Settings > Languages and Maps` to manage input styles that are not limited to your current Android system locale.
+
+This section lets you:
+
+- add an input style
+- choose a language
+- choose a keyboard layout
+- add a custom locale code
+- see whether a dictionary exists for that locale
+- open the IME picker after adding a new style
+
+This is the main place for users who switch between multiple languages or want a layout that differs from the device default.
+
+## Layout switching
+
+In normal use, you can switch language or keymap from the status bar language button or with the relevant hardware shortcut flow, depending on your setup.
+
+Pastiera keeps layout conversion separate from physical key position for ALT, SYM, and Ctrl-related mappings. That means:
+
+- the visible character result can change with the layout
+- the physical-position logic for some modifier mappings remains consistent
+
+## Custom layouts
+
+Pastiera supports JSON-based layout import and export. The app is designed for:
+
+- loading custom mappings
+- enabling or disabling layouts
+- deleting custom layouts
+- previewing mapping behavior
+
+This is useful if you need a niche language layout, a custom remap, or a personal optimization.
+
+## Multi-tap layouts
+
+Some layouts are single-output, while others define multi-tap alternatives. Examples include language-specific accented or script-specific flows. Pastiera uses the layout definition itself to decide whether a key behaves as:
+
+- single output
+- multi-tap
+
+## Vietnamese Telex
+
+Vietnamese Telex is now part of the shipped layout set. To use it:
+
+1. Open `Languages and Maps`.
+2. Add or edit the Vietnamese input style.
+3. Choose the Telex layout.
+4. Test vowel and tone combinations in a normal text field.
+
+If the layout is available but suggestions are not, check whether a matching dictionary exists for that locale.
+
+## Current state
+
+As of March 2026:
+
+- built-in language/layout coverage is broader than the older public docs suggested
+- newer additions such as Vietnamese Telex, German multitap, Ukrainian, and Serbian Cyrillic should be considered first-class documented features
+- some language combinations may intentionally run without dictionary-backed suggestions
+
+> `SCREENSHOT_TODO: languages-and-layouts-input-styles`

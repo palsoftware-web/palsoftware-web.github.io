@@ -1,0 +1,73 @@
+---
+title: Sprachen und Layouts
+description: Eingebaute Layouts, Custom Input Styles und Sprachverwaltung in Pastiera.
+---
+
+## Eingebaute Layout-Unterstuetzung
+
+Pastiera bringt mehr als nur qwerty mit. In den aktuellen App-Assets liegen unter anderem:
+
+- qwerty
+- azerty
+- qwertz
+- greek
+- arabic
+- ukrainian
+- serbian cyrillic
+- german multitap qwertz
+- vietnamese telex qwerty
+- weitere phonetic- oder translit-orientierte Layouts
+
+## Languages and Maps
+
+Unter `Settings > Languages and Maps` verwaltest du Input Styles, die nicht an die aktuelle Android-Systemsprache gebunden sind.
+
+Dort kannst du:
+
+- einen Input Style hinzufuegen
+- eine Sprache waehlen
+- ein Tastaturlayout waehlen
+- einen benutzerdefinierten Locale-Code eintragen
+- sehen, ob ein Dictionary vorhanden ist
+- danach den IME-Picker oeffnen
+
+## Layout-Wechsel
+
+Im Alltag kannst du Sprache oder Keymap ueber die Sprachflaeche in der Statusleiste oder den entsprechenden Hardware-Flow wechseln.
+
+Pastiera trennt sichtbare Zeichenausgabe und einige physische Tastenpositionen bewusst. Das heisst:
+
+- das ausgegebene Zeichen haengt vom Layout ab
+- Teile von ALT-, SYM- und Ctrl-bezogenen Mappings bleiben an die physische Position gekoppelt
+
+## Eigene Layouts
+
+Pastiera unterstuetzt JSON-Import und -Export fuer Layouts. Das ist gedacht fuer:
+
+- eigene Mappings laden
+- Layouts aktivieren oder deaktivieren
+- benutzerdefinierte Layouts loeschen
+- Layoutverhalten vorab pruefen
+
+## Multi-Tap-Layouts
+
+Einige Layouts liefern pro Taste nur ein Zeichen, andere definieren Multi-Tap-Alternativen. Pastiera entscheidet das auf Basis der Layoutdefinition.
+
+## Vietnamese Telex
+
+Vietnamese Telex gehoert inzwischen zum ausgelieferten Layout-Bestand. Nutzung:
+
+1. `Languages and Maps` oeffnen.
+2. Einen vietnamesischen Input Style anlegen oder bearbeiten.
+3. Das Telex-Layout waehlen.
+4. Vokal- und Tonkombinationen in einem normalen Textfeld testen.
+
+## Aktueller Stand
+
+Stand Maerz 2026:
+
+- die eingebaute Sprach- und Layoutabdeckung ist groesser als in aelteren oeffentlichen Docs
+- Vietnamese Telex, German multitap, Ukrainian und Serbian Cyrillic gehoeren klar in die offizielle Funktionsdoku
+- manche Sprachkombinationen funktionieren bewusst ohne Dictionary-basierte Vorschlaege
+
+> `SCREENSHOT_TODO: languages-and-layouts-input-styles`

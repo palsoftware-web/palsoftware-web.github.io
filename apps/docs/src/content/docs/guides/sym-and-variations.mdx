@@ -1,59 +1,91 @@
 ---
 title: SYM and Variations
-description: Behavior model for SYM pages, variations bar, and related customization.
+description: SYM pages, emoji tools, clipboard history, and variation behavior in Pastiera.
 ---
 
-import LocalizedScreenshot from '../../../components/LocalizedScreenshot.astro';
+Last reviewed: 2026-03-07
 
-Last reviewed: 2026-03-06
+## What lives behind SYM
 
-## Scope
+In current Pastiera builds, the SYM flow can expose multiple pages, depending on what you enable:
 
-This page tracks user-visible behavior for:
+- emoji page
+- symbols page
+- clipboard history page
+- full emoji picker page
 
-- SYM pages (emoji/symbol surfaces)
-- Variations bar (dynamic/static variants)
-- Related customization and lock/trigger options
+You can treat SYM as a small layer system rather than as a single static keyboard.
 
-## SYM behavior baseline
+## Where to configure it
 
-1. SYM can expose emoji and symbols pages.
-2. Page availability/order is configurable.
-3. Recent iterations added custom unicode input paths and improved picker controls.
+Open `Settings > Customization > Customize SYM Keyboard`.
 
-## Variations baseline
+Relevant options include:
 
-1. Variations bar can show contextual variants for recently typed characters.
-2. Static variant sets are possible for utility-heavy flows.
-3. Layout and button interactions are influenced by status bar configuration.
+- `Auto-Close SYM Layout`
+- `Enable Emoji Page`
+- `Enable Symbols Page`
+- `Enable Clipboard Page`
+- `Enable Emoji Picker Page`
+- `Arrange SYM pages order`
 
-## Screenshot
+This is where you decide which pages exist at all and in which order Pastiera cycles through them.
 
-<LocalizedScreenshot
-  id="sym-variations-overview"
-  alt="SYM and variations area"
-  caption="SYM and variations overview"
-/>
+## Emoji access
 
-## Known evolution points
+Pastiera currently exposes emoji in two distinct ways:
 
-- Long-press/lock semantics and release timing have been adjusted across issues and commits.
-- Emoji access methods and picker entry points changed during 2026 feature work.
+1. the dedicated emoji SYM page
+2. the full emoji picker
 
-## Configuration checks
+The full picker supports local search. Search terms come from bundled offline assets and currently cover multiple languages, with English fallback when needed.
 
-1. Verify enabled SYM pages and ordering.
-2. Verify static/dynamic variation options.
-3. Verify interaction with status bar and hamburger menu where enabled.
-4. Re-test behavior after importing custom layout/symbol configs.
+## Clipboard history
 
-## References
+Clipboard history is integrated as a page in the same broader surface family.
 
-- Issues:
-  - [#27](https://github.com/palsoftware/pastiera/issues/27)
-  - [#127](https://github.com/palsoftware/pastiera/issues/127)
-  - [#106](https://github.com/palsoftware/pastiera/issues/106)
-  - [#59](https://github.com/palsoftware/pastiera/issues/59)
-- Related docs in reference repo:
-  - `docs/status_bar_buttons.md`
-  - `docs/hamburger_menu.md`
+Current clipboard behavior includes:
+
+- multiple saved entries
+- pinning
+- deletion
+- retention-time control
+
+The main retention setting lives in `Settings > Advanced > Clipboard Retention Time`.
+
+Keep in mind that Android version and OEM policies can still affect what clipboard data is visible to an input method.
+
+## Variations bar
+
+Pastiera also has a variation row above the main typing area. It can work in different modes:
+
+- contextual character variations based on the last typed character
+- a static utility row
+- alternative static layers tied to Shift and Alt state
+
+Relevant settings are found in `Customization` and `Keyboard & Timing`, depending on what part you want to change.
+
+## Customization
+
+The app currently allows deep SYM and variation customization:
+
+- editing SYM mappings
+- choosing emoji per key
+- resetting to defaults
+- editing variation slots
+- setting global variation ordering
+- forcing a static bar instead of purely contextual variants
+
+This makes the feature useful both for language input and for utility-heavy workflows such as punctuation, coding, or symbol entry.
+
+## Current state
+
+The recent app work around SYM, emoji picker search, clipboard integration, and custom Unicode input means this area is one of the most powerful parts of Pastiera, but also one of the most configurable. If behavior feels unexpected, first check:
+
+1. which SYM pages are enabled
+2. page order
+3. auto-close behavior
+4. static versus contextual variation settings
+5. any imported custom mappings
+
+> `SCREENSHOT_TODO: sym-pages-and-variations`

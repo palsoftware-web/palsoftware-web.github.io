@@ -1,0 +1,73 @@
+---
+title: Lingue e layout
+description: Layout integrati, custom input styles e gestione delle lingue in Pastiera.
+---
+
+## Supporto layout incluso
+
+Pastiera include molto piu di un semplice qwerty. Negli asset attuali sono presenti, tra gli altri:
+
+- qwerty
+- azerty
+- qwertz
+- greek
+- arabic
+- ukrainian
+- serbian cyrillic
+- german multitap qwertz
+- vietnamese telex qwerty
+- altri layout fonetici o translit
+
+## Languages and Maps
+
+In `Settings > Languages and Maps` gestisci input styles non limitati alla lingua di sistema Android.
+
+Puoi:
+
+- aggiungere un input style
+- scegliere una lingua
+- scegliere un layout tastiera
+- inserire un locale personalizzato
+- vedere se esiste un dizionario per quel locale
+- aprire l'IME picker dopo l'aggiunta
+
+## Cambio layout
+
+Nell'uso quotidiano puoi cambiare lingua o keymap dal pulsante lingua nella barra di stato o con i relativi flussi hardware.
+
+Pastiera separa volutamente il risultato visibile dei tasti da alcune logiche basate sulla posizione fisica. Quindi:
+
+- il carattere prodotto cambia con il layout
+- parte delle logiche ALT, SYM e Ctrl resta ancorata alla posizione fisica
+
+## Layout personalizzati
+
+Pastiera supporta import/export JSON dei layout per:
+
+- caricare mapping personali
+- abilitare o disabilitare layout
+- eliminare layout personalizzati
+- controllare il comportamento del mapping
+
+## Layout multi-tap
+
+Alcuni layout producono un solo carattere per tasto, altri definiscono alternative multi-tap. Pastiera lo decide dalla definizione del layout.
+
+## Vietnamese Telex
+
+Vietnamese Telex fa parte del set di layout integrati. Per usarlo:
+
+1. Apri `Languages and Maps`.
+2. Aggiungi o modifica l'input style vietnamita.
+3. Scegli il layout Telex.
+4. Prova combinazioni di vocali e toni in un normale campo testo.
+
+## Stato attuale
+
+A marzo 2026:
+
+- la copertura di lingue e layout integrati e piu ampia di quanto mostrassero le vecchie docs
+- Vietnamese Telex, German multitap, Ukrainian e Serbian Cyrillic vanno trattati come funzioni documentate a pieno titolo
+- alcune combinazioni lingua/layout possono funzionare senza suggerimenti basati su dizionario
+
+> `SCREENSHOT_TODO: languages-and-layouts-input-styles`

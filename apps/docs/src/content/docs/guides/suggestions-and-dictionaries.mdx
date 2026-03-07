@@ -1,0 +1,76 @@
+---
+title: Suggestions and Dictionaries
+description: Suggestions, auto substitutions, user dictionaries, and related limits.
+---
+
+## Auto-correction section
+
+Use `Settings > Auto-correction` for everything related to suggestions and substitution behavior.
+
+Pastiera currently exposes:
+
+- per-language substitution sets
+- shared global rules through the Pastiera recipe set
+- language enable/disable controls
+- editing for individual corrections
+- user dictionary management
+- suggestion-engine tuning
+
+## Current feature set
+
+The current app supports these main pieces:
+
+- `Suggestions while typing`
+- `Match accented words`
+- `Auto-replace on space/enter`
+- `Maximum correction distance`
+- `Manage user dictionary`
+- `Keyboard Proximity Ranking`
+- `Edit Type Ranking`
+- `Experimental suggestions`
+
+This means Pastiera can be configured for anything from minimal manual correction to fairly aggressive live assistance.
+
+## User dictionary
+
+The user dictionary is the simplest place to adapt Pastiera to your own vocabulary. You can:
+
+- add words
+- edit saved words
+- remove words
+- keep words that the default dictionaries do not know
+
+This is especially useful for names, technical terms, slang, or multilingual habits.
+
+## Languages and correction sources
+
+Suggestion and auto-correction quality depends on the language resources that exist for the active locale. Some layouts may be fully usable even when suggestion support is missing or intentionally disabled.
+
+The app also distinguishes between:
+
+- available correction data
+- enabled languages
+- languages exposed by IME subtypes
+
+So if a language is visible for typing but suggestions do not work, the most likely cause is missing dictionary or substitution data for that locale.
+
+## Experimental status
+
+The app still labels its newer suggestion engine as experimental. In practice, that means:
+
+- behavior may change faster than in the typing core
+- quality can depend more strongly on language and layout
+- some users will prefer a lighter setup with only selected substitution rules enabled
+
+## Practical recommendation
+
+Start with a conservative setup:
+
+1. enable suggestions while typing
+2. keep auto-replace moderate
+3. add your personal words early
+4. only raise correction aggressiveness if your main language works reliably
+
+This avoids the common problem where a powerful engine is configured too aggressively before its language data matches your real use.
+
+> `SCREENSHOT_TODO: suggestions-and-dictionaries-settings`

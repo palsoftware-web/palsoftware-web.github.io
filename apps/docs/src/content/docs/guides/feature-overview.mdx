@@ -1,0 +1,96 @@
+---
+title: Feature Overview
+description: A clean overview of what Pastiera currently offers.
+---
+
+## Core typing
+
+Pastiera is built for physical-keyboard Android devices and centers on hardware-key productivity:
+
+- configurable long press behavior
+- one-shot and lock states for Shift, Alt, Ctrl, and SYM
+- multi-tap for layouts that define alternative characters
+- optional smart typing helpers such as auto-capitalization and double-space period insertion
+
+## Navigation and shortcuts
+
+Pastiera is more than a keyboard. It also includes device-navigation tools:
+
+- `Nav Mode` for cursor and UI movement with letter keys
+- configurable Ctrl-based shortcuts
+- launcher shortcuts
+- power shortcuts that reuse launcher assignments outside the launcher
+- swipe-based cursor movement on the variation row
+
+## Layouts and language coverage
+
+The app supports both built-in and custom configurations:
+
+- standard Latin layouts such as qwerty, azerty, and qwertz
+- language-specific layouts including Greek, Arabic, Ukrainian, Serbian Cyrillic, and Vietnamese Telex
+- import/export for JSON layouts
+- additional input styles through `Languages and Maps`
+
+## SYM, emoji, variations, and clipboard
+
+Pastiera exposes several non-letter input surfaces:
+
+- reorderable SYM pages
+- emoji page and full emoji picker
+- symbols page
+- clipboard history page
+- configurable variation rows, including static utility rows
+- custom SYM and variation editing
+
+## Suggestions and dictionaries
+
+The app currently includes:
+
+- experimental suggestion engine
+- auto substitutions
+- per-language configuration
+- shared global substitution rules via Pastiera recipes
+- user dictionary editing
+- optional keyboard-proximity and edit-type ranking
+
+## Device-specific extras
+
+Some features depend on device capabilities or extra tools:
+
+- Titan 2 remains a long-standing baseline device
+- Q25 support is recent and should be treated as actively stabilizing
+- trackpad gesture suggestions require Shizuku
+- clipboard behavior can vary with Android or OEM restrictions
+
+## Data, backup, and updates
+
+Pastiera includes maintenance features directly in the app:
+
+- ZIP backup and restore
+- layout and dictionary persistence
+- GitHub-based update checks in builds that support them
+- locale-aware UI translations
+
+## Current state
+
+As of March 7, 2026, the app has broad feature coverage already, but some features are still marked by the upstream project as experimental or recently expanded:
+
+- suggestions are still described in-app and upstream as experimental
+- Q25 support is recent
+- some navigation and gesture workflows depend on device behavior or Shizuku
+- docs screenshots are still pending and tracked separately
+
+## What changed after 0.84 beta
+
+The last stable major release on GitHub is `v0.84beta`, published on February 5, 2026. Since then, the app has mainly grown in these user-visible areas:
+
+- Vietnamese Telex input mode
+- emoji search in both emoji pickers, with offline locale data
+- German QWERTZ multi-tap layout with `ä`, `ö`, `ü`, and `ß`
+- Greek accented-vowel multi-tap improvements
+- Q25 device support and Key2 device profile work
+- more explicit accessibility controls for TalkBack-related behavior
+- stronger variation controls, including a global variation-layout override
+- improved SYM ordering and custom SYM character input
+
+Read the detail pages for exact setup paths and limitations.

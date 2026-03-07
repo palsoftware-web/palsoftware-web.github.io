@@ -1,39 +1,40 @@
 ---
 title: Pastiera
-description: Clean docs and project overview for contributors and interested visitors.
+description: User documentation for the Pastiera physical-keyboard Android app.
 hero:
-  title: Pastiera Project Hub
-  tagline: Docs, release channels, and project map in one maintainable place.
+  title: Pastiera Documentation
+  tagline: What the app can do, how to configure it, and what the current feature set looks like.
   actions:
-    - text: View Project Overview
-      link: /projects/overview/
+    - text: Start Here
+      link: /guides/getting-started/
       icon: right-arrow
-    - text: Nightly F-Droid Repo
-      link: /fdroid/nightly/repo/
+    - text: Feature Overview
+      link: /guides/feature-overview/
       variant: minimal
 features:
-  - title: Monorepo Friendly
-    description: Docs are in apps/docs and deploy independently through GitHub Pages.
-  - title: Contributor Ready
-    description: FAQ and setup guides reduce onboarding time.
-  - title: Project Visibility
-    description: Public overview page explains docs, release channels, and where to look.
+  - title: Product First
+    description: The main docs focus on the Pastiera app, not on repo internals.
+  - title: Current Features
+    description: Typing, layouts, SYM pages, clipboard, suggestions, shortcuts, backup, and device support.
+  - title: Separate Developer Area
+    description: Release channels and operational topics are kept out of the normal user path.
 ---
 
-Use this site as the canonical, structured companion to the repository README.
+Pastiera is an Android input method for devices with a physical keyboard, such as the Unihertz Titan 2 and Q25. It is built around faster hardware typing, configurable modifier behavior, flexible keyboard layouts, SYM and variation layers, suggestions, shortcuts, and backup.
 
-Key entry points:
+Use these pages when you want to understand the app itself:
 
-- Stable and project docs: [pastiera.eu](https://pastiera.eu/)
-- GitHub Nightly releases: [github.com/palsoftware/pastiera/releases?q=nightly%2F](https://github.com/palsoftware/pastiera/releases?q=nightly%2F)
-- Nightly F-Droid repo: [pastiera.eu/fdroid/nightly/repo](https://pastiera.eu/fdroid/nightly/repo)
+- [Getting Started](./guides/getting-started/)
+- [Feature Overview](./guides/feature-overview/)
+- [Practical Setup Recipes](./guides/practical-setup-recipes/)
+- [Typing and Navigation](./guides/typing-and-navigation/)
+- [Languages and Layouts](./guides/languages-and-layouts/)
+- [SYM, Emoji, Clipboard, and Variations](./guides/sym-and-variations/)
+- [Suggestions and Dictionaries](./guides/suggestions-and-dictionaries/)
+- [Device Profiles](./guides/device-profiles/)
+- [Backup and Updates](./guides/backup-and-updates/)
+- [Common Questions](./faq/)
 
-<a href="/fdroid/nightly/repo/">
-  <img
-    src="/fdroid/nightly/repo/index.png"
-    alt="QR code for the Pastiera Nightly F-Droid repo"
-    width="220"
-  />
-</a>
+If you are looking for nightly builds, deployment notes, signing attestations, or repository structure, use the separate [Developer Overview](./developer/overview/).
 
-Update the project overview page whenever new release surfaces or packages are added.
+> `SCREENSHOT_TODO: docs-home-hero`

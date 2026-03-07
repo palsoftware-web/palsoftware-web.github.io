@@ -1,0 +1,102 @@
+---
+title: Practical Setup Recipes
+description: How Pastiera solves real typing problems and how to tune it for your own habits.
+---
+
+## What problems Pastiera is meant to solve
+
+Pastiera is especially useful if one or more of these sounds familiar:
+
+- the stock keyboard on a hardware device feels too dumb or too slow
+- you want faster symbol entry without losing letter speed
+- you switch between languages or layouts often
+- you want navigation shortcuts on a physical keyboard
+- you need clipboard, emoji, and symbols without leaving the keyboard flow
+- you want to keep a heavily customized setup across reinstalls or devices
+
+## Recipe: I mainly want faster everyday typing
+
+Start with:
+
+- `Settings > Keyboard & Timing > Long Press Duration`
+- `Settings > Smart Features > Auto-Capitalize First Letter`
+- `Settings > Smart Features > Auto-Capitalize After Period`
+- `Settings > Smart Features > Double Space to Period`
+- `Settings > Smart Features > Clear Alt on Space`
+
+This gives you the biggest quality-of-life gain with the least complexity.
+
+## Recipe: I want long press to produce accents or character variants instead of Alt
+
+Set `Settings > Keyboard & Timing > Long Press Modifier` to `Variations`.
+
+That setup is useful if:
+
+- you type accented Latin text often
+- you prefer character variants over symbol-heavy long press behavior
+- you want umlauts or similar characters to feel closer to the base letter
+
+If you still need fast symbols, compensate with SYM pages or a static variation row.
+
+## Recipe: I want German umlauts and sharp s on QWERTZ
+
+Use the `German (QWERTZ, multi-tap)` layout in `Settings > Languages and Maps`.
+
+The current layout asset includes direct multi-tap access for:
+
+- `a -> ä`
+- `o -> ö`
+- `u -> ü`
+- `s -> ß`
+
+Practical note: multi-tap layouts reward a slightly controlled rhythm. If you type the same key extremely fast, be aware that you are using a timing-based input method and may need a short adaptation period.
+
+## Recipe: I want Vietnamese Telex
+
+Pastiera now includes a dedicated Vietnamese Telex layout mode.
+
+In practice:
+
+1. Open `Settings > Languages and Maps`.
+2. Add or edit the Vietnamese input style.
+3. Choose the Telex layout.
+4. Test common vowel and tone combinations in a normal text field.
+
+This is a real integrated typing mode, not just a static remap.
+
+## Recipe: I want SYM to be tidy and predictable
+
+Open `Settings > Customization > Customize SYM Keyboard`.
+
+There you can decide:
+
+- which SYM pages are enabled
+- whether clipboard is part of the cycle
+- whether the full emoji picker is part of the cycle
+- page order
+- whether SYM auto-closes after insertion
+
+This is the right place if SYM currently feels cluttered or inconsistent.
+
+## Recipe: I want a utility-heavy setup for coding or admin work
+
+A good practical combination is:
+
+- `Long Press Modifier = Sym` or `Variations`
+- static variation bar enabled
+- tuned SYM page order
+- Nav Mode configured for your preferred movement keys
+- launcher or power shortcuts only after the rest feels stable
+
+That turns Pastiera into a small command surface rather than only a text keyboard.
+
+## Recipe: I keep triggering the wrong thing when typing quickly
+
+Usually the fix is not one setting but a small combination:
+
+1. lower or raise `Long Press Duration`
+2. decide whether long press should really be `Alt`, `Sym`, or `Variations`
+3. check whether your active layout is multi-tap
+4. simplify SYM pages so fewer layers compete for attention
+
+Pastiera is powerful, but it works best once the active typing model matches your actual habits.

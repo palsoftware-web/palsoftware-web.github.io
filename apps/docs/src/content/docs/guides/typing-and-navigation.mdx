@@ -1,0 +1,121 @@
+---
+title: Typing and Navigation
+description: Daily typing behavior, modifier handling, and movement shortcuts in Pastiera.
+---
+
+## What this page covers
+
+This page documents the features you use while actively typing:
+
+- long press
+- modifiers and lock states
+- smart typing helpers
+- Nav Mode
+- cursor movement and delete alternatives
+- launcher and power shortcuts
+
+## Keyboard & Timing
+
+Use `Settings > Keyboard & Timing` for the timing-sensitive parts of Pastiera.
+
+Key options include:
+
+- `Long Press Duration`
+- `Long Press Modifier`
+
+`Long Press Modifier` decides what holding a key does. Depending on your setup, long press can trigger:
+
+- `Alt`
+- `Shift`
+- `Variations`
+- `Sym`
+
+This lets you tune the keyboard either for symbol-heavy typing, accent-heavy typing, or direct access to SYM mappings.
+
+## Smart Features
+
+Use `Settings > Smart Features` for the default typing helpers:
+
+- `Auto-Capitalize First Letter`
+- `Auto-Capitalize After Period`
+- `Double Space to Period`
+- `Clear Alt on Space`
+- `Enable Swipe to Delete`
+- `Auto Show Keyboard`
+- `Alt+Ctrl Speech Recognition`
+- delete alternatives such as `Shift + Backspace`, `Alt + Backspace`, and `Backspace at line start`
+
+These are convenience settings. Most users should start here after the first install.
+
+## Modifiers and status behavior
+
+Pastiera supports one-shot and locked states for the usual modifiers:
+
+- `Shift`
+- `Alt`
+- `Ctrl`
+- `SYM`
+
+The status bar shows their state visually. In normal use:
+
+- a single press gives you a temporary state
+- a double tap can lock the modifier
+- some behavior depends on whether you are in text entry or in a navigation-oriented flow
+
+The current upstream behavior distinguishes between:
+
+- physically held `Ctrl` combinations inside text fields
+- `Nav Mode`, which is a separate latched state entered by double-tapping Ctrl outside text fields
+
+## Nav Mode
+
+`Nav Mode` is configured from `Settings > Customization > Nav Mode`.
+
+It is intended for movement and command-style input when you are not simply entering text. Typical uses include:
+
+- arrow-like movement with letter keys
+- selection shortcuts
+- page movement
+- escape/tab style actions
+- custom remapping of key actions
+
+This mode is especially useful on devices where moving around Android UI with a hardware keyboard is otherwise slow.
+
+## Cursor movement
+
+Pastiera supports cursor movement in several ways:
+
+- Ctrl-based navigation shortcuts
+- swipe movement on the variation row
+- device-specific gestures
+
+The variation row can act as a swipe bar. Sensitivity is adjusted in `Settings > Advanced > Swipe Bar Sensitivity`.
+
+## Launcher and power shortcuts
+
+Use `Settings > Advanced` for shortcut features:
+
+- `Shortcuts`
+- `Configure Shortcuts`
+- `Power Shortcuts`
+
+Current behavior:
+
+- launcher shortcuts let you assign letters to apps in launcher context
+- power shortcuts reuse the same idea after pressing `SYM`, so they can be used more broadly across the system
+
+## Speech recognition
+
+Pastiera can expose speech input through `Alt+Ctrl Speech Recognition`. This is optional and depends on what speech recognition provider is available on the device.
+
+## Practical setup recommendation
+
+For a balanced daily setup:
+
+1. Set long press to the action you use most often.
+2. Enable `Clear Alt on Space` if you often stay in Alt by accident.
+3. Keep `Double Space to Period` on if you write a lot of normal prose.
+4. Tune `Swipe Bar Sensitivity` if cursor movement feels too fast or too slow.
+5. Only enable advanced shortcuts once your basic typing behavior already feels stable.
+
+> `SCREENSHOT_TODO: typing-and-navigation-settings`

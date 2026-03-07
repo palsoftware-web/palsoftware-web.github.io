@@ -1,0 +1,63 @@
+---
+title: Backup und Updates
+description: Backup, Restore und Update-Verhalten in aktuellen Pastiera-Builds.
+---
+
+## Backup und Restore
+
+Die wichtigsten Wartungsaktionen liegen in `Settings > Advanced`:
+
+- `Backup now`
+- `Restore from file`
+
+Pastiera erstellt und importiert ZIP-Backups, damit deine Konfiguration bei Neuinstallation oder Geraetewechsel erhalten bleibt.
+
+## Was enthalten ist
+
+Aktuell werden vor allem diese Nutzerdaten abgedeckt:
+
+- Einstellungen
+- Layouts
+- Variationen
+- SYM-Mappings
+- Dictionaries und andere benutzerdefinierte Daten
+
+Der Restore-Flow versucht, mit neueren Defaults kompatibel zu bleiben, statt alles blind zu ueberschreiben.
+
+## Wann man ein Backup machen sollte
+
+Vor allem vor:
+
+- Tests mit Nightly-Builds
+- einem App-Reset
+- einem Geraetewechsel
+- groesseren Layout- oder Dictionary-Aenderungen
+
+## App-Updates
+
+Ein Teil der Builds kann direkt aus den Einstellungen auf GitHub nach Updates suchen. Das haengt von Release-Kanal und Build-Flavour ab.
+
+Fuer normale Nutzer gilt:
+
+- stable fuer moeglichst ruhige Nutzung
+- nightly fuer schnellere neue Aenderungen
+
+## Aktuelle Grenzen
+
+Update-Verhalten ist nicht in allen Kanaelen identisch:
+
+- manche Builds pruefen GitHub direkt
+- F-Droid-orientierte Builds koennen bewusst anders arbeiten
+- stable und nightly koennen sich bei App-ID oder Signierung unterscheiden
+
+Die operativen Details dazu stehen im Developer-Bereich.
+
+## Empfohlene Gewohnheit
+
+Wenn deine Pastiera-Konfiguration wichtig ist:
+
+1. vor Kanalwechsel ein Backup machen
+2. ein funktionierendes ZIP-Backup aufheben
+3. Layouts, SYM-Seiten und Dictionaries nach dem Restore direkt pruefen
+
+> `SCREENSHOT_TODO: backup-and-updates-advanced-settings`

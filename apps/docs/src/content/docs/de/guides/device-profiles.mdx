@@ -1,0 +1,59 @@
+---
+title: Geraeteprofile
+description: Geraete-Support, Kompatibilitaet und hardwarebezogenes Verhalten in Pastiera.
+---
+
+Last reviewed: 2026-03-07
+
+## Hardware-Fokus
+
+Pastiera ist nicht primar fuer Touch-only-Geraete gedacht, sondern fuer Android-Hardware mit echter Tastatur.
+
+## Aktuelle Basisgeraete
+
+Die App fuehrt aktuell geraetespezifische Assets fuer:
+
+- Titan 2
+- Q25
+- Key2
+
+Titan 2 ist historisch das wichtigste Referenzgeraet. Q25-Support ist deutlich neuer.
+
+## Was Geraete-Support beeinflusst
+
+Je nach Hardware kann Pastiera anpassen:
+
+- Key-Remapping
+- alternatives Tastenverhalten
+- Komfort bei Gesten
+- erwartete Nutzung der Statusleiste
+- wie natuerlich Nav Mode oder Swipe-Interaktionen wirken
+
+## Q25-Status
+
+Q25 ist inzwischen klar im Code und in den Assets vertreten. Die sinnvollste Einordnung aktuell:
+
+- unterstuetzt
+- benutzbar
+- nach groesseren Input-Aenderungen weiterhin pruefenswert
+
+## Accessibility und Plattformgrenzen
+
+Unter `Settings > Accessibility` gibt es Optionen fuer das Vorlesen der zweiten Zeile und das Timing von Suggestion-Ansagen.
+
+Einige Grenzen sind Android- oder OEM-bedingt, besonders bei:
+
+- Clipboard-Zugriff
+- Hintergrundbeschraenkungen
+- sicherheitsrelevanten oder fruehen Geraetezustand-Szenarien
+
+## Empfohlene Tests nach der Einrichtung
+
+1. normales Tippen
+2. Long Press und Modifizierer
+3. Nav Mode
+4. SYM-Seiten und Emoji-Picker
+5. Clipboard-History
+6. Backup und Restore
+
+> `SCREENSHOT_TODO: device-profiles-supported-devices`

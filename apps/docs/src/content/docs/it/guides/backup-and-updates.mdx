@@ -1,0 +1,63 @@
+---
+title: Backup e aggiornamenti
+description: Backup, ripristino e comportamento degli aggiornamenti nelle build attuali di Pastiera.
+---
+
+## Backup e ripristino
+
+Le azioni principali di manutenzione sono in `Settings > Advanced`:
+
+- `Backup now`
+- `Restore from file`
+
+Pastiera crea e importa backup ZIP per mantenere la configurazione durante reinstallazioni o passaggi di dispositivo.
+
+## Cosa viene incluso
+
+L'attuale copertura del backup include soprattutto:
+
+- preferenze
+- layout
+- variazioni
+- mapping SYM
+- dizionari e altri dati personalizzati
+
+Il ripristino cerca di restare compatibile con i default piu recenti quando possibile.
+
+## Quando fare un backup
+
+Prima di:
+
+- provare nightly build
+- resettare l'app
+- cambiare dispositivo
+- importare grosse modifiche a layout o dizionari
+
+## Aggiornamenti app
+
+Alcune build possono controllare gli aggiornamenti su GitHub direttamente dalle impostazioni. Il comportamento dipende dal canale e dal build flavor.
+
+Per l'utente normale:
+
+- stable per un uso piu prevedibile
+- nightly per ricevere prima le novita
+
+## Limiti attuali
+
+Il comportamento update non e identico in tutti i canali:
+
+- alcune build usano controllo GitHub diretto
+- le build orientate a F-Droid possono usare un flusso diverso
+- stable e nightly possono differire per application ID o aspettative di firma
+
+I dettagli operativi sono documentati nell'area developer.
+
+## Abitudine consigliata
+
+Se la tua configurazione Pastiera e importante:
+
+1. fai un backup prima di cambiare canale
+2. conserva almeno un ZIP sicuramente funzionante
+3. verifica layout, pagine SYM e dizionari subito dopo il restore
+
+> `SCREENSHOT_TODO: backup-and-updates-advanced-settings`

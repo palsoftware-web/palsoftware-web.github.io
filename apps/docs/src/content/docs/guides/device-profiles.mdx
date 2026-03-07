@@ -1,48 +1,65 @@
 ---
 title: Device Profiles
-description: Device-specific support notes (Titan2, Q25) and compatibility guidance.
+description: Device support, compatibility notes, and hardware-specific behavior in Pastiera.
 ---
 
-import LocalizedScreenshot from '../../../components/LocalizedScreenshot.astro';
+Last reviewed: 2026-03-07
 
-Last reviewed: 2026-03-06
+## Hardware focus
 
-## Scope
+Pastiera is not a general soft keyboard first. It is aimed at Android devices with a real physical keyboard, and some behavior is profile-aware.
 
-Pastiera targets physical-keyboard Android devices with profile-specific behavior where needed.
+## Current baseline devices
 
-## Titan2 baseline
+The app currently carries device-specific assets for:
 
-- Primary development and validation target in historical releases.
-- Includes device-specific key mapping support and nav-mode workflows.
+- Titan 2
+- Q25
+- Key2
 
-## Q25 support
+Titan 2 has historically been the main reference device in the project. Q25 support is newer and should still be considered a more recent addition.
 
-- Dedicated support merged in PR [#146](https://github.com/palsoftware/pastiera/pull/146).
-- This is recent and should be treated as actively stabilizing.
+## What device support changes
 
-## Screenshot
+Depending on the hardware, Pastiera may adapt:
 
-<LocalizedScreenshot
-  id="device-profile-q25"
-  alt="Q25 profile-related settings"
-  caption="Q25 profile"
-/>
+- key remapping
+- alternate key behavior
+- gesture comfort
+- status-bar usage expectations
+- how natural Nav Mode or swipe interactions feel
 
-## Compatibility note
+The app is still fundamentally one product, but not every feature behaves equally well on every keyboard shape.
 
-- Some feature requests are blocked by platform/device constraints (example context: BFU state discussion in [#149](https://github.com/palsoftware/pastiera/issues/149)).
+## Q25 status
 
-## Suggested test matrix
+Q25 support is present in the current app assets and codebase. That is a meaningful change from older docs, where Q25 was not documented at all.
 
-1. Core typing/modifier flow
-2. SYM and variations behavior
-3. Nav mode and shortcuts
-4. Clipboard and emoji picker interactions
-5. Backup/restore cycle
+The safest way to think about Q25 support today is:
 
-## References
+- supported
+- usable
+- still worth verifying carefully after each major input-behavior change
 
-- Q25 support PR: [#146](https://github.com/palsoftware/pastiera/pull/146)
-- Ukrainian layout PR: [#105](https://github.com/palsoftware/pastiera/pull/105)
-- Serbian Cyrillic layout PR: [#130](https://github.com/palsoftware/pastiera/pull/130)
+## Accessibility and platform limits
+
+Pastiera also exposes accessibility-related settings in `Settings > Accessibility`, including how the second row is announced and how quickly suggestions are read.
+
+Some limits are not project bugs but Android or OEM constraints. That especially applies to:
+
+- clipboard access behavior
+- background restrictions
+- certain pre-unlock or security-sensitive scenarios
+
+## Recommended validation after setup
+
+If you are configuring Pastiera on a new device, test these areas first:
+
+1. normal typing
+2. long press and modifier state changes
+3. Nav Mode
+4. SYM pages and emoji picker
+5. clipboard history
+6. backup and restore
+
+> `SCREENSHOT_TODO: device-profiles-supported-devices`

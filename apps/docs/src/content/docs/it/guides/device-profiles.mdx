@@ -1,0 +1,59 @@
+---
+title: Profili dispositivo
+description: Supporto dispositivi, compatibilita e comportamento hardware-specifico in Pastiera.
+---
+
+Last reviewed: 2026-03-07
+
+## Focus hardware
+
+Pastiera non e pensata prima di tutto per dispositivi solo touch, ma per hardware Android con tastiera reale.
+
+## Dispositivi base attuali
+
+L'app include asset specifici per:
+
+- Titan 2
+- Q25
+- Key2
+
+Titan 2 e il riferimento storico principale. Il supporto Q25 e piu recente.
+
+## Cosa cambia con il profilo dispositivo
+
+A seconda dell'hardware, Pastiera puo adattare:
+
+- remapping dei tasti
+- comportamento alternativo di alcuni tasti
+- comfort delle gesture
+- uso previsto della barra di stato
+- naturalezza di Nav Mode o delle interazioni swipe
+
+## Stato Q25
+
+Q25 e ormai rappresentato in modo esplicito nel codice e negli asset. Oggi conviene considerarlo:
+
+- supportato
+- utilizzabile
+- da verificare con attenzione dopo grandi cambi al comportamento input
+
+## Accessibilita e limiti di piattaforma
+
+In `Settings > Accessibility` trovi opzioni per la lettura della seconda riga e per il ritardo di lettura dei suggerimenti.
+
+Alcuni limiti dipendono da Android o dal vendor, soprattutto per:
+
+- accesso clipboard
+- restrizioni in background
+- scenari di sicurezza o stati iniziali del dispositivo
+
+## Test consigliati dopo la configurazione
+
+1. digitazione normale
+2. long press e modificatori
+3. Nav Mode
+4. pagine SYM e picker emoji
+5. cronologia clipboard
+6. backup e restore
+
+> `SCREENSHOT_TODO: device-profiles-supported-devices`
