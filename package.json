@@ -1,5 +1,5 @@
 {
-  "name": "pastiera-monorepo",
+  "name": "pastiera-web-docs",
   "private": true,
   "version": "0.1.0",
   "workspaces": [
@@ -10,6 +10,7 @@
     "docs:dev": "npm --workspace @pastiera/docs run dev",
     "docs:build": "npm --workspace @pastiera/docs run build",
     "docs:preview": "npm --workspace @pastiera/docs run preview",
-    "docs:images": "npm --workspace @pastiera/docs run images"
+    "docs:images": "npm --workspace @pastiera/docs run images",
+    "docs:screenshots:capture": "npm --workspace @pastiera/docs run screenshots:capture --"
   }
 }

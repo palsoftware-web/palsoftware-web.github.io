@@ -7,12 +7,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "images": "node ./scripts/generate-device-shots.mjs"
+    "images": "node ./scripts/generate-device-shots.mjs",
+    "screenshots:capture": "bash ./scripts/capture-emulator-screenshots.sh"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.1.6",
     "@astrojs/starlight": "^0.28.0",
     "astro": "^4.16.18",
-    "sharp": "^0.34.4"
+    "sharp": "^0.34.4",
+    "unist-util-visit": "^5.0.0"
   }
 }

@@ -1,0 +1,79 @@
+---
+title: Soundpack per la digitazione
+description: Formato ZIP per importare suoni personalizzati in Pastiera.
+---
+
+Pastiera puo importare suoni personalizzati per la digitazione da un file ZIP. Un soundpack dovrebbe contenere piu file audio brevi, cosi i tasti possono variare in modo naturale invece di ripetere sempre lo stesso campione.
+
+## Struttura ZIP
+
+Usa questi nomi di cartella dentro lo ZIP:
+
+```text
+normal/
+space/
+backspace/
+enter/
+modifier/
+```
+
+`normal/` e obbligatoria. Le altre cartelle sono opzionali. Se manca una cartella speciale, Pastiera usa i campioni di `normal/`.
+
+Esempio:
+
+```text
+my-soundpack.zip
+├── normal/
+│   ├── key-01.ogg
+│   ├── key-02.ogg
+│   └── key-03.ogg
+├── space/
+│   └── space-01.ogg
+├── backspace/
+│   └── backspace-01.ogg
+├── enter/
+│   └── enter-01.ogg
+└── modifier/
+    └── modifier-01.ogg
+```
+
+## File accettati
+
+Formati audio supportati:
+
+- OGG
+- WAV
+- MP3
+- M4A
+
+Tieni i campioni brevi e tagliati bene all'inizio. Circa 20-120 ms funzionano spesso meglio di registrazioni lunghe, perche il suono deve partire subito quando premi un tasto.
+
+Limiti attuali:
+
+- fino a 2 MB per file audio
+- fino a 16 MB per ZIP
+- fino a 96 file audio per ZIP
+
+## Gruppi di tasti
+
+Usa `normal/` per lettere, numeri, punteggiatura e simboli normali.
+
+Usa le cartelle speciali solo per tasti che possono avere un suono distinto:
+
+- `space/` per Spazio
+- `backspace/` per Backspace e cancellazione ripetuta
+- `enter/` per Enter
+- `modifier/` per Shift, Ctrl, Alt, Sym e tasti di modalita tastiera
+
+Per una variazione naturale, aggiungi piu campioni simili in `normal/`. Per la privacy, evita di associare singole lettere a suoni chiaramente riconoscibili.
+
+## Importazione
+
+Su Android:
+
+1. Metti lo ZIP in una posizione accessibile dal selettore file di sistema.
+2. Apri `Settings > Customization > Typing Sounds`.
+3. Seleziona `Custom sound pack…`.
+4. Scegli il file ZIP.
+
+Pastiera copia i file audio nello spazio privato dell'app. Dopo l'importazione puoi eliminare lo ZIP originale.

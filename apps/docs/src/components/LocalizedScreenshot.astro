@@ -6,18 +6,38 @@ interface Props {
   id: string;
   alt: string;
   caption?: string;
+  build?: string;
 }
 
-const { id, alt, caption } = Astro.props as Props;
+interface ScreenshotManifest {
+  latestBuild: string;
+  builds: Record<string, { label?: string; sourceRepo?: string; sourceRef?: string; capturedAt?: string | null }>;
+}
+
+const { id, alt, caption, build = 'latest' } = Astro.props as Props;
 const currentLocale = (Astro.currentLocale || 'en').toLowerCase();
 const normalizedLocale = currentLocale.split('-')[0] || 'en';
+const publicDir = path.join(process.cwd(), 'public');
+const manifestPath = path.join(publicDir, 'showcase/screenshots/manifest.json');
+
+const fallbackManifest = {
+  latestBuild: 'dev',
+  builds: { dev: { label: 'Development', sourceRepo: 'palsoftware/pastiera', sourceRef: 'main', capturedAt: null } }
+} satisfies ScreenshotManifest;
+
+const manifest = fs.existsSync(manifestPath)
+  ? (JSON.parse(fs.readFileSync(manifestPath, 'utf-8')) as ScreenshotManifest)
+  : fallbackManifest;
+
+const resolvedBuild = build === 'latest' ? manifest.latestBuild : (manifest.builds[build] ? build : manifest.latestBuild);
 
 const candidates = [
-  { locale: normalizedLocale, src: `/showcase/screenshots/${normalizedLocale}/${id}.png` },
-  { locale: 'en', src: `/showcase/screenshots/en/${id}.png` }
+  { locale: normalizedLocale, build: resolvedBuild, src: `/showcase/screenshots/${resolvedBuild}/${normalizedLocale}/${id}.png` },
+  { locale: 'en', build: resolvedBuild, src: `/showcase/screenshots/${resolvedBuild}/en/${id}.png` },
+  { locale: normalizedLocale, build: 'legacy', src: `/showcase/screenshots/${normalizedLocale}/${id}.png` },
+  { locale: 'en', build: 'legacy', src: `/showcase/screenshots/en/${id}.png` }
 ];
 
-const publicDir = path.join(process.cwd(), 'public');
 const resolved = candidates.find((candidate) =>
   fs.existsSync(path.join(publicDir, candidate.src.replace(/^\//, '')))
 );
@@ -27,12 +47,17 @@ const resolved = candidates.find((candidate) =>
   <figure>
     <img src={resolved.src} alt={alt} loading="lazy" />
     <figcaption>
-      {caption || alt} ({resolved.locale === normalizedLocale ? `locale: ${resolved.locale}` : `fallback: en`})
+      {caption || alt}
+      {' '}
+      ({resolved.build === 'legacy' ? 'legacy path' : `build: ${resolved.build}`},{' '}
+      {resolved.locale === normalizedLocale ? `locale: ${resolved.locale}` : 'fallback: en'})
     </figcaption>
   </figure>
 ) : (
   <div style="border: 1px solid #d0d7de; padding: 0.9rem; border-radius: 0.5rem; background: #f6f8fa;">
     <strong>Screenshot missing:</strong> <code>{id}</code>
-    <p style="margin: 0.5rem 0 0;">Expected at <code>/showcase/screenshots/{normalizedLocale}/{id}.png</code> or fallback <code>/showcase/screenshots/en/{id}.png</code>.</p>
+    <p style="margin: 0.5rem 0 0;">
+      Expected at <code>/showcase/screenshots/{resolvedBuild}/{normalizedLocale}/{id}.png</code> or fallback <code>/showcase/screenshots/{resolvedBuild}/en/{id}.png</code>.
+    </p>
   </div>
 )}

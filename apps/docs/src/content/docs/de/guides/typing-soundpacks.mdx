@@ -1,0 +1,79 @@
+---
+title: Tastenton-Soundpacks
+description: ZIP-Format für eigene Tastentöne in Pastiera.
+---
+
+Pastiera kann eigene Tastentöne als ZIP-Datei importieren. Ein Soundpack sollte mehrere kurze Audiodateien enthalten, damit Tastenanschläge leicht variieren und nicht immer exakt dasselbe Sample abgespielt wird.
+
+## ZIP-Struktur
+
+Nutze diese Ordnernamen in der ZIP-Datei:
+
+```text
+normal/
+space/
+backspace/
+enter/
+modifier/
+```
+
+`normal/` ist erforderlich. Die anderen Ordner sind optional. Wenn eine Spezialgruppe fehlt, nutzt Pastiera dafür Samples aus `normal/`.
+
+Beispiel:
+
+```text
+mein-soundpack.zip
+├── normal/
+│   ├── key-01.ogg
+│   ├── key-02.ogg
+│   └── key-03.ogg
+├── space/
+│   └── space-01.ogg
+├── backspace/
+│   └── backspace-01.ogg
+├── enter/
+│   └── enter-01.ogg
+└── modifier/
+    └── modifier-01.ogg
+```
+
+## Erlaubte Dateien
+
+Unterstützte Audioformate:
+
+- OGG
+- WAV
+- MP3
+- M4A
+
+Die Samples sollten kurz sein und am Anfang sauber getrimmt werden. Etwa 20-120 ms fühlen sich meistens besser an als längere Aufnahmen, weil der Ton direkt beim Tastendruck reagieren muss.
+
+Aktuelle Importgrenzen:
+
+- bis 2 MB pro Audiodatei
+- bis 16 MB pro ZIP-Datei
+- bis 96 Audiodateien pro ZIP-Datei
+
+## Tastengruppen
+
+`normal/` ist für Buchstaben, Zahlen, Satzzeichen und normale Symboltasten.
+
+Die Spezialordner sind für Tasten gedacht, die hörbar anders klingen dürfen:
+
+- `space/` für Leertaste
+- `backspace/` für Backspace und wiederholtes Löschen
+- `enter/` für Enter
+- `modifier/` für Shift, Ctrl, Alt, Sym und Tastaturmodus-Tasten
+
+Für natürlichere Variation packe mehrere ähnliche Samples in `normal/`. Aus Datenschutzsicht sollten einzelne Buchstaben nicht durch eindeutig erkennbare Einzelsounds unterscheidbar werden.
+
+## Import
+
+Auf Android:
+
+1. Lege die ZIP-Datei so ab, dass die System-Dateiauswahl sie finden kann.
+2. Öffne `Einstellungen > Anpassung > Tastentöne`.
+3. Wähle `Eigenes Soundpack…`.
+4. Wähle die ZIP-Datei aus.
+
+Pastiera kopiert die Audiodateien in den privaten App-Speicher. Die ursprüngliche ZIP-Datei kann nach dem Import gelöscht werden.

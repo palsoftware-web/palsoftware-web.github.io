@@ -1,0 +1,79 @@
+---
+title: Typing Soundpacks
+description: ZIP format for importing custom typing sounds in Pastiera.
+---
+
+Pastiera can import custom typing sounds as a ZIP file. A soundpack should contain several short audio files so key presses can vary naturally instead of replaying the same sample every time.
+
+## ZIP structure
+
+Use these folder names inside the ZIP:
+
+```text
+normal/
+space/
+backspace/
+enter/
+modifier/
+```
+
+`normal/` is required. The other folders are optional. If a special folder is missing, Pastiera falls back to the samples from `normal/`.
+
+Example:
+
+```text
+my-soundpack.zip
+├── normal/
+│   ├── key-01.ogg
+│   ├── key-02.ogg
+│   └── key-03.ogg
+├── space/
+│   └── space-01.ogg
+├── backspace/
+│   └── backspace-01.ogg
+├── enter/
+│   └── enter-01.ogg
+└── modifier/
+    └── modifier-01.ogg
+```
+
+## Accepted files
+
+Supported audio formats:
+
+- OGG
+- WAV
+- MP3
+- M4A
+
+Keep every sample short and trimmed at the beginning. Around 20-120 ms usually feels better than long recordings because the sound must react immediately when a key is pressed.
+
+Current import limits:
+
+- up to 2 MB per audio file
+- up to 16 MB per ZIP
+- up to 96 audio files per ZIP
+
+## Key groups
+
+Use `normal/` for letters, digits, punctuation, and regular symbol keys.
+
+Use the special folders only when the key should sound distinct:
+
+- `space/` for Space
+- `backspace/` for Backspace and repeat delete
+- `enter/` for Enter
+- `modifier/` for Shift, Ctrl, Alt, Sym, and keyboard mode keys
+
+For natural variation, add several similar samples to `normal/`. For privacy, avoid mapping individual letters to clearly recognizable unique sounds.
+
+## Importing
+
+On Android:
+
+1. Put the ZIP somewhere the system file picker can access.
+2. Open `Settings > Customization > Typing Sounds`.
+3. Select `Custom sound pack…`.
+4. Pick the ZIP file.
+
+Pastiera copies the audio files into its private app storage. The original ZIP can be deleted after import.

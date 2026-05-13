@@ -1,0 +1,31 @@
+{
+  "packageName": "it.palsoftware.pastiera",
+  "launchActivity": "it.palsoftware.pastiera.MainActivity",
+  "scenes": [
+    {
+      "id": "emoji-search-inline",
+      "description": "Inline emoji search view",
+      "prepareShell": "input keyevent KEYCODE_SYM"
+    },
+    {
+      "id": "clipboard-history-panel",
+      "description": "Clipboard history panel",
+      "prepareShell": "input keyevent KEYCODE_SYM"
+    },
+    {
+      "id": "vietnamese-telex-layout",
+      "description": "Vietnamese Telex selected",
+      "prepareShell": "input keyevent KEYCODE_LANGUAGE_SWITCH"
+    },
+    {
+      "id": "device-profile-q25",
+      "description": "Device profile settings",
+      "prepareShell": ""
+    },
+    {
+      "id": "sym-variations-overview",
+      "description": "SYM and variations overview",
+      "prepareShell": "input keyevent KEYCODE_SYM"
+    }
+  ]
+}

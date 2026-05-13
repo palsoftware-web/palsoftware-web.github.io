@@ -1,33 +1,54 @@
-# pastiera monorepo
+# Pastiera Web Docs
 
-Project source lives in this monorepo. Documentation and project overview are hosted via GitHub Pages at `https://pastiera.eu`.
+This repository hosts the public website/docs for Pastiera at `https://pastiera.eu`.
+
+The Android app source is maintained in a separate repository:
+- `https://github.com/palsoftware/pastiera`
+
+## Repository focus
+
+- Public project overview and feature documentation
+- Screenshot-based guides (locale-aware with English fallback)
+- GitHub Pages deployment
 
 ## Structure
 
-- `apps/docs` - Astro Starlight docs site (landing page, FAQ, guides, project overview)
-- `apps/*` - app projects
-- `packages/*` - shared libraries
+- `apps/docs` - Astro Starlight site
+- `.github/workflows/docs-pages.yml` - GitHub Pages build/deploy workflow
 
-## Docs development
+## Local commands
 
 ```bash
 npm install
 npm run docs:dev
-```
-
-## Build docs
-
-```bash
 npm run docs:build
 ```
 
-## Generate showcase images
+## Screenshot pipelines
 
-1. Add raw screenshots as PNG files to `apps/docs/assets/showcase/raw/`
-2. Run:
+Static mockup generator:
 
 ```bash
 npm run docs:images
 ```
 
-Generated images are written to `apps/docs/public/showcase/generated/`.
+Emulator capture pipeline (build + locale aware):
+
+```bash
+npm run docs:screenshots:capture -- \
+  --avd Pastiera_API_36 \
+  --pastiera-repo ~/gits/GitHub/pastiera \
+  --locale en-US \
+  --locale de-DE \
+  --show-emulator \
+  --verbose
+```
+
+Default capture resolution is `1440x1440`. Override with `--width` and `--height` if needed.
+If `--apk` is omitted, the script builds `:app:assembleDebug` automatically from `--pastiera-repo`.
+Locale handling is done by restarting emulator per locale with boot props (no runtime `setprop` dependency).
+The capture runner also performs best-effort IME activation and dialog/onboarding dismissal before scene capture.
+
+Captured screenshots and build mapping are stored in:
+- `apps/docs/public/showcase/screenshots/<build_id>/<locale>/`
+- `apps/docs/public/showcase/screenshots/manifest.json`

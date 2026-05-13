@@ -8,11 +8,26 @@ Last reviewed: 2026-03-06
 ## Policy
 
 - Primary screenshot language files:
-  - `/showcase/screenshots/en/<id>.png`
-  - `/showcase/screenshots/de/<id>.png`
+  - `/showcase/screenshots/<build_id>/en/<id>.png`
+  - `/showcase/screenshots/<build_id>/de/<id>.png`
 - Runtime behavior in docs:
+  - Resolve active build from `/showcase/screenshots/manifest.json` (`latestBuild`)
   - Tries current docs locale first
   - Falls back to English if locale-specific screenshot is missing
+
+## Capture command
+
+```bash
+npm run docs:screenshots:capture -- \
+  --avd Pastiera_API_36 \
+  --pastiera-repo ~/gits/GitHub/pastiera \
+  --locale en-US \
+  --locale de-DE
+```
+
+Default capture resolution: `1440x1440`.
+If `--apk` is omitted, the script auto-builds from `--pastiera-repo`.
+Locale capture uses one emulator restart per locale with boot locale props.
 
 ## Open screenshot tasks
 

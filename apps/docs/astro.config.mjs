@@ -1,9 +1,18 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import starlight from '@astrojs/starlight';
+import { remarkLinkifyCommits } from './plugins/remark-linkify-commits.mjs';
 
 export default defineConfig({
   site: 'https://pastiera.eu',
+  markdown: {
+    remarkPlugins: [
+      [
+        remarkLinkifyCommits,
+        { repo: 'palsoftware/pastiera' }
+      ]
+    ]
+  },
   integrations: [
     starlight({
       title: 'Pastiera',
@@ -27,6 +36,7 @@ export default defineConfig({
           label: 'Features',
           items: [
             { slug: 'guides/typing-and-navigation' },
+            { slug: 'guides/typing-soundpacks' },
             { slug: 'guides/languages-and-layouts' },
             { slug: 'guides/sym-and-variations' },
             { slug: 'guides/suggestions-and-dictionaries' },
