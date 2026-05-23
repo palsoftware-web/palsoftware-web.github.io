@@ -1,24 +1,39 @@
 {
   "version": "0.85",
+  "previousVersion": "v0.84beta",
   "title": "Pastiera 0.85",
   "docsUrl": "https://pastiera.eu/it/",
   "highlights": [
-    "QuickLauncher è nuovo: apri app dalla tastiera con una ricerca in stile Spotlight.",
-    "QuickLauncher parte più rapidamente, può rispettare il layout tastiera attivo e usa ranking tollerante agli errori.",
-    "Barra di stato e variazioni sono più flessibili, con opzioni più chiare per visibilità e dimensioni.",
-    "I preset messenger per app possono usare SYM + Invio come scorciatoia aggiuntiva per inviare.",
-    "Nav Mode aggiunge navigazione per parole, controlli multimediali, passthrough Ctrl nativo e Ctrl tenuto."
+    "QuickLauncher è nuovo: apre app direttamente dalla tastiera, anche dai campi di testo, con una ricerca rapida in stile Spotlight.",
+    "Il comportamento di Invio per messenger e app può ora essere configurato per app, inclusa una scorciatoia opzionale SYM + Invio per inviare.",
+    "Variazioni, pagine SYM e barra di stato sono più flessibili, con modalità long-press, preset di variazioni statiche, caratteri SYM personalizzati e pulsanti della status bar configurabili.",
+    "Scorciatoie e Nav Mode supportano più tasti fisici, navigazione per parole, controlli multimediali, scorciatoie Ctrl consapevoli del layout e passthrough Ctrl nativo.",
+    "Pastiera 0.85 aggiunge o espande Serbian Cyrillic, Ucraino, Russian JCUKEN e ЙЦУКЕН, multitap tedesco QWERTZ, accenti greci, Vietnamese TELEX, multitap turco, Danese, Olandese e Norvegese."
   ],
   "improvements": [
-    "L’assegnazione delle scorciatoie supporta più tasti fisici, inclusi Spazio, Invio e Backspace.",
-    "Modalità tastiera virtuale, suoni di digitazione, simboli, backup e stabilità del rilascio ricevono molti miglioramenti minori."
+    "Il supporto dispositivi è stato esteso per Q25, BlackBerry Key2, Minimal Phone MP01, Titan 2 Elite QWERTY e comportamento SYM/trackpad di Titan 2.",
+    "La ricerca emoji basata su CLDR è disponibile in entrambi i picker emoji, con input da tasti hardware e dati di ricerca per le lingue supportate.",
+    "Suoni di digitazione, etichette accessibility, comportamento TalkBack, backup/restore, impostazioni, strumenti debug, tutorial, icone e caricamento release notes hanno ricevuto vari miglioramenti minori."
   ],
   "bugFixes": [
-    "Layout tastiera e selezione subtype non ricadono più genericamente su QWERTY quando va rispettato un altro layout attivo.",
-    "La cancellazione del testo selezionato e lo Smart Backspace sono più robusti con una selezione attiva.",
-    "Le mappature Alt del Q25 per zero e simboli valuta sono state corrette.",
-    "I suggerimenti Pastierina restano più stabili quando interagiscono le impostazioni Minimal UI.",
-    "È stato corretto un loop di visualizzazione IME durante il rilevamento della tastiera di sistema.",
-    "Sono stati puliti l’elisione con apostrofo lungo e vari casi limite di simboli/input."
+    "Risolto il clipping inferiore della tastiera sui dispositivi interessati.",
+    "Evitati crash da API subtype di Android 14 su versioni Android più vecchie.",
+    "Il riconoscimento vocale usa ora la lingua del subtype IME attivo.",
+    "Le build installate da F-Droid non eseguono più controlli update GitHub.",
+    "Corrette substitution solo simboli, passthrough Ctrl, spacing delle substitution, latch/hold dei modifier e tap-off dello Shift latch.",
+    "Corretta l'autocorrezione di apostrofi ed elisioni italiane, incluse forme più lunghe come dell' e nell'.",
+    "Corrette le mappature Alt del Q25 per 0 e simboli valuta.",
+    "Risolta la selezione subtype/layout in modo che layout attivi e personalizzati siano rispettati invece di ricadere su QWERTY nei casi sbagliati.",
+    "Le alternative Backspace-delete non intercettano più la cancellazione normale quando del testo è selezionato.",
+    "Evitato un loop di visualizzazione IME durante la valutazione della visibilità tastiera.",
+    "Corretti casi limite della visibilità suggerimenti Pastierina.",
+    "Migliorato il routing della ricerca emoji, incluso il caso principale Ctrl+A/focus ricerca."
+  ],
+  "nightlyRegressionFixes": [
+    "Corretti problemi Nightly specifici di selezione IME, application-id e identity detection.",
+    "Puliti metadati Nightly F-Droid, comportamento dei canali, version code ed etichette app/IME.",
+    "La validazione signing è limitata ai task di packaging, così i task CI non-packaging non falliscono per configurazione signing mancante.",
+    "Rafforzati strumenti locali di build release/Nightly, signing attestations, verifica APK e workflow di rilascio.",
+    "La stabilizzazione Ctrl-hold Nav Mode è trattata come stabilizzazione Nightly, non come fix principale per utenti Stable."
   ]
 }

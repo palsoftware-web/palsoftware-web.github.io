@@ -1,24 +1,40 @@
 {
   "version": "0.85",
+  "previousVersion": "v0.84beta",
   "title": "Pastiera 0.85",
   "docsUrl": "https://pastiera.eu/",
   "highlights": [
-    "QuickLauncher is new: open apps from the keyboard with a Spotlight-style search dialog.",
-    "QuickLauncher starts faster, can respect the active keyboard layout, and supports typo-tolerant ranking.",
-    "Status bar and variation controls are more flexible, including clearer visibility and sizing options.",
-    "App-specific messenger presets can use SYM + Enter as an additional send shortcut.",
-    "Nav Mode adds word navigation, media controls, native Ctrl passthrough, and Ctrl-hold behavior."
+    "QuickLauncher is new: open apps from the keyboard, including from text fields, with a fast Spotlight-style search dialog.",
+    "Messenger and app Enter behavior can now be configured per app, including an optional SYM + Enter send shortcut.",
+    "Variations, SYM pages, and the status bar are more flexible, with long-press modes, static variation presets, custom SYM characters, and configurable status bar buttons.",
+    "Shortcuts and Nav Mode gained more physical-key options, word navigation, media controls, layout-aware Ctrl shortcuts, and native Ctrl passthrough.",
+    "Pastiera 0.85 adds or expands Serbian Cyrillic, Ukrainian, Russian JCUKEN and ЙЦУКЕН, German QWERTZ multi-tap, Greek accents, Vietnamese TELEX, Turkish multi-tap, Danish, Dutch, and Norwegian support."
   ],
   "improvements": [
-    "Shortcut assignment supports more physical keys, including Space, Enter, and Backspace.",
-    "Virtual keyboard mode, typing sounds, symbol handling, backup flows, and release stability all received smaller improvements."
+    "Device support was expanded for Q25, BlackBerry Key2, Minimal Phone MP01, Titan 2 Elite QWERTY, and Titan 2 SYM/trackpad behavior.",
+    "CLDR-backed emoji search is available in both emoji pickers, with hardware-key input routing and bundled search data for supported locales.",
+    "Typing sounds, accessibility labels, TalkBack behavior, backup/restore flows, settings screens, debug tools, tutorial pages, icons, and release-note loading all received smaller improvements."
   ],
   "bugFixes": [
-    "Keyboard layout and subtype selection now avoid falling back to QWERTY when another active layout should be respected.",
-    "Selection deletion and smart Backspace behavior are safer when text is selected.",
-    "Q25 Alt mappings for zero and currency symbols were corrected.",
-    "Pastierina suggestion visibility is more stable when minimal UI settings interact.",
-    "An IME visibility loop during system keyboard evaluation was fixed.",
-    "Long apostrophe elision and several symbol/input edge cases were cleaned up."
-  ]
+    "Fixed keyboard bottom clipping on affected devices.",
+    "Prevented Android 14 subtype API crashes on older Android versions.",
+    "Speech recognition now uses the current IME subtype language.",
+    "F-Droid-installed builds no longer perform GitHub update checks.",
+    "Fixed symbol-only substitution triggers, Ctrl passthrough, substitution spacing, modifier latch/hold behavior, and Shift latch tap-off behavior.",
+    "Fixed apostrophe and Italian elision autocorrect ranking, including longer forms such as dell' and nell'.",
+    "Fixed Q25 Alt mappings for 0 and currency symbols.",
+    "Fixed subtype and layout resolution so active and custom layouts are respected instead of falling back to QWERTY in the wrong places.",
+    "Backspace delete alternatives no longer intercept normal deletion while text is selected.",
+    "Avoided an IME show loop during keyboard visibility evaluation.",
+    "Fixed Pastierina suggestion visibility edge cases.",
+    "Improved emoji search routing, including the main Ctrl+A/search-focus case."
+  ],
+  "nightlyRegressionFixes": [
+    "Fixed Nightly-specific IME selection, application-id, and identity detection issues.",
+    "Cleaned up Nightly F-Droid metadata, channel behavior, version codes, and app/IME labels.",
+    "Limited signing validation to packaging tasks so non-packaging CI tasks do not fail on missing signing configuration.",
+    "Hardened local release and Nightly build tooling, signing attestations, APK verification, and release workflows.",
+    "Ctrl-hold Nav Mode stabilization is treated as Nightly stabilization rather than as a headline Stable-user fix."
+  ],
+  "githubReleaseBody": "Pastiera 0.85 is a large Stable update since v0.84beta. It adds QuickLauncher for keyboard-driven app launching, per-app Enter behavior for messenger workflows, more flexible variation/SYM/status bar controls, more shortcut and Nav Mode options, new layouts and languages, and additional device profiles for Q25, BlackBerry Key2, Minimal Phone MP01, and Titan 2 Elite QWERTY.\n\nHighlights:\n- QuickLauncher opens apps from the keyboard, can work from text fields, starts quickly, and supports optional layout-aware search plus conservative typo-tolerant ranking.\n- Messenger/app Enter behavior can be configured per app, including optional SYM + Enter send behavior.\n- Variation, SYM, and status bar controls now include long-press modes, static variation presets, Dev's Choice, sort-ready SYM pages, custom SYM characters, and configurable undo/redo buttons.\n- Shortcuts now support Space, Enter, and Backspace, with Alt+Shift layout switching, forward-delete alternatives, word navigation, media controls, layout-aware Ctrl shortcuts, and native Ctrl passthrough.\n- Layout and language support has expanded with Serbian Cyrillic, Ukrainian, Russian JCUKEN and ЙЦУКЕН, German QWERTZ multi-tap, Greek accents, Vietnamese TELEX, Turkish multi-tap, Danish, Dutch, and Norwegian.\n\nFixes include keyboard bottom clipping, Android <14 subtype crashes, speech-recognition language selection, F-Droid update-check behavior, symbol-only substitutions, Ctrl passthrough, modifier latch/hold handling, apostrophe/elision autocorrect, Q25 Alt mappings, subtype/layout resolution, Backspace behavior with selected text, IME visibility loops, Pastierina suggestion visibility, and emoji search focus routing.\n\nSeveral Nightly-only regressions and CI/signing/F-Droid release paths were also cleaned up during the 0.85 Nightly phase. Those are included as stabilization work, not as headline Stable-user features."
 }
