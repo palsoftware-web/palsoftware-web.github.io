@@ -1,0 +1,14 @@
+{
+  "version": "0.85",
+  "title": "Pastiera 0.85",
+  "highlights": [
+    "Il tutorial aggiornato presenta dopo l’upgrade le impostazioni nuove più importanti.",
+    "QuickLauncher ora si può aprire anche dai campi di testo con SYM + Spazio.",
+    "I controlli delle variazioni nella barra di stato sono più chiari e possono nascondere del tutto le variazioni.",
+    "I preset messenger per app supportano una scorciatoia opzionale SYM + Invio per inviare.",
+    "La gestione dei layout tastiera è più affidabile, inclusa la ricerca QuickLauncher con QWERTZ.",
+    "Il ranking dei suggerimenti tollera meglio gli errori di battitura e può imparare le app preferite.",
+    "Gli utenti Titan 2 ricevono indicazioni per nascondere la barra IME extra quando supportato.",
+    "Molti fix minori migliorano layout, simboli, navigazione, backup e stabilità del rilascio."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "0.85",
+  "title": "Pastiera 0.85",
+  "highlights": [
+    "A refreshed tutorial introduces the most important new settings after the upgrade.",
+    "QuickLauncher can now be opened from text fields with SYM + Space.",
+    "Status bar variation controls are clearer and can hide variations entirely.",
+    "App-specific messenger presets support an optional SYM + Enter send shortcut.",
+    "Keyboard layout handling is more reliable, including QWERTZ-aware QuickLauncher search.",
+    "Suggestion ranking is more typo-tolerant and can learn preferred app launches.",
+    "Titan 2 users get guidance for hiding the extra IME caption bar where supported.",
+    "Many smaller fixes improve layouts, symbols, navigation, backups, and release stability."
+  ]
+}
