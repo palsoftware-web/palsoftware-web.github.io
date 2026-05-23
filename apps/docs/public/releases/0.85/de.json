@@ -4,7 +4,7 @@
   "title": "Pastiera 0.85",
   "docsUrl": "https://pastiera.eu/de/",
   "highlights": [
-    "QuickLauncher ist neu: Apps direkt über die Tastatur öffnen, auch aus Textfeldern heraus, mit einer schnellen Spotlight-artigen Suche.",
+    "QuickLauncher ist neu: Apps direkt über die Tastatur öffnen, auch aus Textfeldern heraus, mit schneller tastaturorientierter Suche.",
     "Messenger- und App-Enter-Verhalten kann jetzt pro App gesteuert werden, inklusive optionaler SYM + Enter-Tastenkombination zum Senden.",
     "Variationen, SYM-Seiten und Statusleiste sind flexibler steuerbar, mit Long-Press-Modi, statischen Variation-Presets, eigenen SYM-Zeichen und konfigurierbaren Statusbar-Buttons.",
     "Shortcuts und Nav Mode unterstützen mehr physische Tasten, Wortnavigation, Mediensteuerung, layout-aware Ctrl-Shortcuts und natives Ctrl-Passthrough.",

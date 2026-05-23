@@ -4,7 +4,7 @@
   "title": "Pastiera 0.85",
   "docsUrl": "https://pastiera.eu/it/",
   "highlights": [
-    "QuickLauncher è nuovo: apre app direttamente dalla tastiera, anche dai campi di testo, con una ricerca rapida in stile Spotlight.",
+    "QuickLauncher è nuovo: apre app direttamente dalla tastiera, anche dai campi di testo, con una ricerca rapida pensata per la tastiera.",
     "Il comportamento di Invio per messenger e app può ora essere configurato per app, inclusa una scorciatoia opzionale SYM + Invio per inviare.",
     "Variazioni, pagine SYM e barra di stato sono più flessibili, con modalità long-press, preset di variazioni statiche, caratteri SYM personalizzati e pulsanti della status bar configurabili.",
     "Scorciatoie e Nav Mode supportano più tasti fisici, navigazione per parole, controlli multimediali, scorciatoie Ctrl consapevoli del layout e passthrough Ctrl nativo.",
