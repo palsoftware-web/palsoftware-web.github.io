@@ -1,14 +1,24 @@
 {
   "version": "0.85",
   "title": "Pastiera 0.85",
+  "docsUrl": "https://pastiera.eu/de/",
   "highlights": [
-    "Ein überarbeitetes Tutorial zeigt nach dem Upgrade die wichtigsten neuen Einstellungen.",
-    "Der QuickLauncher lässt sich jetzt auch aus Textfeldern mit SYM + Leertaste öffnen.",
-    "Die Variationssteuerung in der Statusleiste ist klarer und kann Variationen komplett ausblenden.",
-    "App-spezifische Messenger-Presets unterstützen optional SYM + Enter zum Senden.",
-    "Keyboard-Layouts werden zuverlässiger berücksichtigt, inklusive QWERTZ-Suche im QuickLauncher.",
-    "Das Ranking der Vorschläge ist toleranter bei Tippfehlern und kann bevorzugte App-Starts lernen.",
-    "Titan-2-Nutzer bekommen Hinweise zum Ausblenden der zusätzlichen IME-Leiste, sofern unterstützt.",
-    "Viele kleinere Fixes verbessern Layouts, Symbole, Navigation, Backups und Release-Stabilität."
+    "QuickLauncher ist neu: Apps direkt über die Tastatur mit einer Spotlight-artigen Suche öffnen.",
+    "QuickLauncher startet schneller, kann das aktive Tastaturlayout berücksichtigen und toleriert Tippfehler im Ranking.",
+    "Statusleiste und Variationen sind flexibler steuerbar, inklusive klarerer Sichtbarkeit und Größenoptionen.",
+    "App-spezifische Messenger-Presets können SYM + Enter als zusätzliche Senden-Tastenkombination nutzen.",
+    "Nav Mode ergänzt Wortnavigation, Mediensteuerung, natives Ctrl-Passthrough und Ctrl-Halten."
+  ],
+  "improvements": [
+    "Shortcut-Zuweisungen unterstützen mehr physische Tasten, darunter Space, Enter und Backspace.",
+    "Virtueller Tastaturmodus, Tastentöne, Symbolverhalten, Backup-Flows und Release-Stabilität wurden an vielen kleineren Stellen verbessert."
+  ],
+  "bugFixes": [
+    "Tastaturlayouts und Subtype-Auswahl fallen nicht mehr pauschal auf QWERTY zurück, wenn ein anderes aktives Layout respektiert werden soll.",
+    "Löschen von markiertem Text und Smart-Backspace-Verhalten sind bei aktiver Auswahl robuster.",
+    "Q25-Alt-Belegungen für Null und Währungssymbole wurden korrigiert.",
+    "Pastierina-Vorschläge bleiben stabiler sichtbar, wenn Minimal-UI-Einstellungen zusammenspielen.",
+    "Eine IME-Anzeigeschleife bei der Systemtastatur-Erkennung wurde behoben.",
+    "Lange Apostroph-Elision und mehrere Symbol-/Eingabe-Kantenfälle wurden bereinigt."
   ]
 }

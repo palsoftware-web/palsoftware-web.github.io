@@ -1,14 +1,24 @@
 {
   "version": "0.85",
   "title": "Pastiera 0.85",
+  "docsUrl": "https://pastiera.eu/it/",
   "highlights": [
-    "Il tutorial aggiornato presenta dopo l’upgrade le impostazioni nuove più importanti.",
-    "QuickLauncher ora si può aprire anche dai campi di testo con SYM + Spazio.",
-    "I controlli delle variazioni nella barra di stato sono più chiari e possono nascondere del tutto le variazioni.",
-    "I preset messenger per app supportano una scorciatoia opzionale SYM + Invio per inviare.",
-    "La gestione dei layout tastiera è più affidabile, inclusa la ricerca QuickLauncher con QWERTZ.",
-    "Il ranking dei suggerimenti tollera meglio gli errori di battitura e può imparare le app preferite.",
-    "Gli utenti Titan 2 ricevono indicazioni per nascondere la barra IME extra quando supportato.",
-    "Molti fix minori migliorano layout, simboli, navigazione, backup e stabilità del rilascio."
+    "QuickLauncher è nuovo: apri app dalla tastiera con una ricerca in stile Spotlight.",
+    "QuickLauncher parte più rapidamente, può rispettare il layout tastiera attivo e usa ranking tollerante agli errori.",
+    "Barra di stato e variazioni sono più flessibili, con opzioni più chiare per visibilità e dimensioni.",
+    "I preset messenger per app possono usare SYM + Invio come scorciatoia aggiuntiva per inviare.",
+    "Nav Mode aggiunge navigazione per parole, controlli multimediali, passthrough Ctrl nativo e Ctrl tenuto."
+  ],
+  "improvements": [
+    "L’assegnazione delle scorciatoie supporta più tasti fisici, inclusi Spazio, Invio e Backspace.",
+    "Modalità tastiera virtuale, suoni di digitazione, simboli, backup e stabilità del rilascio ricevono molti miglioramenti minori."
+  ],
+  "bugFixes": [
+    "Layout tastiera e selezione subtype non ricadono più genericamente su QWERTY quando va rispettato un altro layout attivo.",
+    "La cancellazione del testo selezionato e lo Smart Backspace sono più robusti con una selezione attiva.",
+    "Le mappature Alt del Q25 per zero e simboli valuta sono state corrette.",
+    "I suggerimenti Pastierina restano più stabili quando interagiscono le impostazioni Minimal UI.",
+    "È stato corretto un loop di visualizzazione IME durante il rilevamento della tastiera di sistema.",
+    "Sono stati puliti l’elisione con apostrofo lungo e vari casi limite di simboli/input."
   ]
 }

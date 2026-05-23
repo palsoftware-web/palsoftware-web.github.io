@@ -1,14 +1,24 @@
 {
   "version": "0.85",
   "title": "Pastiera 0.85",
+  "docsUrl": "https://pastiera.eu/",
   "highlights": [
-    "A refreshed tutorial introduces the most important new settings after the upgrade.",
-    "QuickLauncher can now be opened from text fields with SYM + Space.",
-    "Status bar variation controls are clearer and can hide variations entirely.",
-    "App-specific messenger presets support an optional SYM + Enter send shortcut.",
-    "Keyboard layout handling is more reliable, including QWERTZ-aware QuickLauncher search.",
-    "Suggestion ranking is more typo-tolerant and can learn preferred app launches.",
-    "Titan 2 users get guidance for hiding the extra IME caption bar where supported.",
-    "Many smaller fixes improve layouts, symbols, navigation, backups, and release stability."
+    "QuickLauncher is new: open apps from the keyboard with a Spotlight-style search dialog.",
+    "QuickLauncher starts faster, can respect the active keyboard layout, and supports typo-tolerant ranking.",
+    "Status bar and variation controls are more flexible, including clearer visibility and sizing options.",
+    "App-specific messenger presets can use SYM + Enter as an additional send shortcut.",
+    "Nav Mode adds word navigation, media controls, native Ctrl passthrough, and Ctrl-hold behavior."
+  ],
+  "improvements": [
+    "Shortcut assignment supports more physical keys, including Space, Enter, and Backspace.",
+    "Virtual keyboard mode, typing sounds, symbol handling, backup flows, and release stability all received smaller improvements."
+  ],
+  "bugFixes": [
+    "Keyboard layout and subtype selection now avoid falling back to QWERTY when another active layout should be respected.",
+    "Selection deletion and smart Backspace behavior are safer when text is selected.",
+    "Q25 Alt mappings for zero and currency symbols were corrected.",
+    "Pastierina suggestion visibility is more stable when minimal UI settings interact.",
+    "An IME visibility loop during system keyboard evaluation was fixed.",
+    "Long apostrophe elision and several symbol/input edge cases were cleaned up."
   ]
 }
