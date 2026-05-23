@@ -26,6 +26,28 @@ npm run docs:build
 
 ## Screenshot pipelines
 
+Maestro tutorial smoke flow:
+
+```bash
+apps/docs/scripts/run-maestro-tutorial-flow.sh \
+  --avd Pastiera_API_36 \
+  --pastiera-repo ~/gits/GitHub/pastiera
+```
+
+To render the same flow as a local video:
+
+```bash
+apps/docs/scripts/run-maestro-tutorial-flow.sh \
+  --avd Pastiera_API_36 \
+  --record apps/docs/public/showcase/tutorials/tutorial-onboarding.mp4
+```
+
+Install Maestro locally first with:
+
+```bash
+curl -fsSL "https://get.maestro.mobile.dev" | bash
+```
+
 Static mockup generator:
 
 ```bash

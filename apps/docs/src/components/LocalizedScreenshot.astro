@@ -7,6 +7,7 @@ interface Props {
   alt: string;
   caption?: string;
   build?: string;
+  showMeta?: boolean;
 }
 
 interface ScreenshotManifest {
@@ -14,7 +15,7 @@ interface ScreenshotManifest {
   builds: Record<string, { label?: string; sourceRepo?: string; sourceRef?: string; capturedAt?: string | null }>;
 }
 
-const { id, alt, caption, build = 'latest' } = Astro.props as Props;
+const { id, alt, caption, build = 'latest', showMeta = false } = Astro.props as Props;
 const currentLocale = (Astro.currentLocale || 'en').toLowerCase();
 const normalizedLocale = currentLocale.split('-')[0] || 'en';
 const publicDir = path.join(process.cwd(), 'public');
@@ -48,9 +49,13 @@ const resolved = candidates.find((candidate) =>
     <img src={resolved.src} alt={alt} loading="lazy" />
     <figcaption>
       {caption || alt}
-      {' '}
-      ({resolved.build === 'legacy' ? 'legacy path' : `build: ${resolved.build}`},{' '}
-      {resolved.locale === normalizedLocale ? `locale: ${resolved.locale}` : 'fallback: en'})
+      {showMeta ? (
+        <>
+          {' '}
+          ({resolved.build === 'legacy' ? 'legacy path' : `build: ${resolved.build}`},{' '}
+          {resolved.locale === normalizedLocale ? `locale: ${resolved.locale}` : 'fallback: en'})
+        </>
+      ) : null}
     </figcaption>
   </figure>
 ) : (

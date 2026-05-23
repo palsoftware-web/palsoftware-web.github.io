@@ -14,6 +14,7 @@ Generated device mockups are stored under `/showcase/generated/`.
 
 ## Pastiera Documentation Status
 
+- [Pastiera Feature Matrix](/projects/pastiera-feature-matrix/)
 - [Pastiera Feature Audit](/projects/pastiera-feature-audit/)
 - [Pastiera Documentation Plan](/projects/pastiera-doc-plan/)
 - [Screenshot Backlog](/guides/screenshot-backlog/)

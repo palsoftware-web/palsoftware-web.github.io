@@ -1,0 +1,15 @@
+appId: it.palsoftware.pastiera
+name: Tutorial onboarding smoke test
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    text: "LATER"
+    optional: true
+- assertVisible: "Welcome to Pastiera"
+- assertVisible: "Skip"
+- tapOn: "Next"
+- assertVisible: "Enable Pastiera"
+- tapOn: "Next"
+- assertVisible: "Select Pastiera"
+
