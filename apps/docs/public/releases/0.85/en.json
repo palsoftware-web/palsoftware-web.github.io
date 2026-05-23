@@ -13,7 +13,8 @@
   "improvements": [
     "Device support was expanded for Q25, BlackBerry Key2, Minimal Phone MP01, Titan 2 Elite QWERTY, and Titan 2 SYM/trackpad behavior.",
     "CLDR-backed emoji search is available in both emoji pickers, with hardware-key input routing and bundled search data for supported locales.",
-    "Typing sounds, accessibility labels, TalkBack behavior, backup/restore flows, settings screens, debug tools, tutorial pages, icons, and release-note loading all received smaller improvements."
+    "Typing sounds, accessibility labels, TalkBack behavior, backup/restore flows, settings screens, debug tools, tutorial pages, icons, and release-note loading all received smaller improvements.",
+    "The refreshed tutorial includes guidance for hiding the Android IME caption bar where supported, which is especially useful on Titan 2 style setups where the system caption otherwise wastes screen space."
   ],
   "bugFixes": [
     "Fixed keyboard bottom clipping on affected devices.",
@@ -22,12 +23,12 @@
     "F-Droid-installed builds no longer perform GitHub update checks.",
     "Fixed symbol-only substitution triggers, Ctrl passthrough, substitution spacing, modifier latch/hold behavior, and Shift latch tap-off behavior.",
     "Fixed apostrophe and Italian elision autocorrect ranking, including longer forms such as dell' and nell'.",
-    "Fixed Q25 Alt mappings for 0 and currency symbols.",
     "Fixed subtype and layout resolution so active and custom layouts are respected instead of falling back to QWERTY in the wrong places.",
     "Backspace delete alternatives no longer intercept normal deletion while text is selected.",
     "Avoided an IME show loop during keyboard visibility evaluation.",
     "Fixed Pastierina suggestion visibility edge cases.",
-    "Improved emoji search routing, including the main Ctrl+A/search-focus case."
+    "Improved emoji search routing, including the main Ctrl+A/search-focus case.",
+    "Improved Shizuku status handling and user feedback for trackpad/suggestion swipe features after recent Android behavior changes."
   ],
   "nightlyRegressionFixes": [
     "Fixed Nightly-specific IME selection, application-id, and identity detection issues.",

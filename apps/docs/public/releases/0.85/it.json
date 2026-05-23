@@ -13,7 +13,8 @@
   "improvements": [
     "Il supporto dispositivi è stato esteso per Q25, BlackBerry Key2, Minimal Phone MP01, Titan 2 Elite QWERTY e comportamento SYM/trackpad di Titan 2.",
     "La ricerca emoji basata su CLDR è disponibile in entrambi i picker emoji, con input da tasti hardware e dati di ricerca per le lingue supportate.",
-    "Suoni di digitazione, etichette accessibility, comportamento TalkBack, backup/restore, impostazioni, strumenti debug, tutorial, icone e caricamento release notes hanno ricevuto vari miglioramenti minori."
+    "Suoni di digitazione, etichette accessibility, comportamento TalkBack, backup/restore, impostazioni, strumenti debug, tutorial, icone e caricamento release notes hanno ricevuto vari miglioramenti minori.",
+    "Il tutorial aggiornato spiega come nascondere la barra caption IME di Android dove supportato, utile soprattutto su setup tipo Titan 2 quando la barra di sistema occupa spazio."
   ],
   "bugFixes": [
     "Risolto il clipping inferiore della tastiera sui dispositivi interessati.",
@@ -22,12 +23,12 @@
     "Le build installate da F-Droid non eseguono più controlli update GitHub.",
     "Corrette substitution solo simboli, passthrough Ctrl, spacing delle substitution, latch/hold dei modifier e tap-off dello Shift latch.",
     "Corretta l'autocorrezione di apostrofi ed elisioni italiane, incluse forme più lunghe come dell' e nell'.",
-    "Corrette le mappature Alt del Q25 per 0 e simboli valuta.",
     "Risolta la selezione subtype/layout in modo che layout attivi e personalizzati siano rispettati invece di ricadere su QWERTY nei casi sbagliati.",
     "Le alternative Backspace-delete non intercettano più la cancellazione normale quando del testo è selezionato.",
     "Evitato un loop di visualizzazione IME durante la valutazione della visibilità tastiera.",
     "Corretti casi limite della visibilità suggerimenti Pastierina.",
-    "Migliorato il routing della ricerca emoji, incluso il caso principale Ctrl+A/focus ricerca."
+    "Migliorato il routing della ricerca emoji, incluso il caso principale Ctrl+A/focus ricerca.",
+    "Migliorati stato Shizuku e feedback utente per funzioni trackpad/suggestion swipe dopo recenti cambiamenti di comportamento Android."
   ],
   "nightlyRegressionFixes": [
     "Corretti problemi Nightly specifici di selezione IME, application-id e identity detection.",

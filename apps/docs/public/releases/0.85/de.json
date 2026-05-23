@@ -13,7 +13,8 @@
   "improvements": [
     "Geräteunterstützung wurde für Q25, BlackBerry Key2, Minimal Phone MP01, Titan 2 Elite QWERTY sowie Titan-2-SYM- und Trackpad-Verhalten erweitert.",
     "CLDR-basierte Emoji-Suche ist in beiden Emoji-Pickern verfügbar, inklusive Hardware-Tasten-Eingabe und Suchdaten für unterstützte Locales.",
-    "Tastentöne, Accessibility-Labels, TalkBack-Verhalten, Backup-/Restore-Flows, Einstellungen, Debug-Tools, Tutorial-Seiten, Icons und Release-Notes-Laden wurden an vielen kleineren Stellen verbessert."
+    "Tastentöne, Accessibility-Labels, TalkBack-Verhalten, Backup-/Restore-Flows, Einstellungen, Debug-Tools, Tutorial-Seiten, Icons und Release-Notes-Laden wurden an vielen kleineren Stellen verbessert.",
+    "Das überarbeitete Tutorial erklärt das Ausblenden der Android-IME-Caption-Bar, wo es unterstützt wird; das ist besonders auf Titan-2-ähnlichen Setups hilfreich, wenn die Systemleiste sonst Platz verbraucht."
   ],
   "bugFixes": [
     "Keyboard-Clipping am unteren Rand wurde auf betroffenen Geräten behoben.",
@@ -22,12 +23,12 @@
     "F-Droid-installierte Builds führen keine GitHub-Update-Checks mehr aus.",
     "Symbol-only substitutions, Ctrl-Passthrough, Substitution-Spacing, Modifier-Latch/Hold und Shift-Latch-Tap-Off wurden korrigiert.",
     "Apostroph- und italienische Elisions-Autokorrektur wurde korrigiert, inklusive längerer Formen wie dell' und nell'.",
-    "Q25-Alt-Belegungen für 0 und Währungssymbole wurden korrigiert.",
     "Subtype- und Layout-Auflösung respektiert aktive und eigene Layouts zuverlässiger, statt an falschen Stellen auf QWERTY zurückzufallen.",
     "Backspace-Delete-Alternativen greifen nicht mehr in normales Löschen ein, wenn Text markiert ist.",
     "Eine IME-Anzeigeschleife während der Keyboard-Visibility-Auswertung wurde vermieden.",
     "Pastierina-Suggestion-Visibility-Kantenfälle wurden korrigiert.",
-    "Emoji-Search-Routing wurde verbessert, inklusive des zentralen Ctrl+A/Search-Focus-Falls."
+    "Emoji-Search-Routing wurde verbessert, inklusive des zentralen Ctrl+A/Search-Focus-Falls.",
+    "Shizuku-Status und Nutzerfeedback für Trackpad-/Suggestion-Swipe-Funktionen wurden nach neueren Android-Verhaltensänderungen verbessert."
   ],
   "nightlyRegressionFixes": [
     "Nightly-spezifische IME-Auswahl-, Application-ID- und Identity-Erkennung wurde korrigiert.",
