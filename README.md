@@ -74,3 +74,35 @@ The capture runner also performs best-effort IME activation and dialog/onboardin
 Captured screenshots and build mapping are stored in:
 - `apps/docs/public/showcase/screenshots/<build_id>/<locale>/`
 - `apps/docs/public/showcase/screenshots/manifest.json`
+
+## Android App Links
+
+`apps/docs/public/.well-known/assetlinks.json` associates pastiera.eu with
+Pastiera Stable (`it.palsoftware.pastiera`) and Nightly
+(`it.palsoftware.pastiera.nightly`). Astro copies it unchanged to the site root.
+
+The SHA-256 certificate fingerprints come from the app repository's
+`signing/lineages/README.md` (2026-09-05 ceremony): each channel includes its
+legacy certificate and the A, B and C rotation certificates. These are app
+signing certificates, not hardware attestation certificates or APK file hashes.
+Local debug certificates are not included. Keep the existing associations when
+adding Plektra packages; pkb.rocks is configured separately.
+
+After publishing, check that
+`https://pastiera.eu/.well-known/assetlinks.json` returns HTTP 200 directly,
+with `Content-Type: application/json` and the expected JSON. On a device with a
+matching signed build, request verification:
+
+```sh
+adb shell pm verify-app-links --re-verify it.palsoftware.pastiera.nightly
+# Allow a few minutes for Android's asynchronous verification.
+adb shell pm get-app-links it.palsoftware.pastiera.nightly
+```
+
+Expect `pastiera.eu: verified`. Repeat for `it.palsoftware.pastiera` when
+testing Stable. Finally open a settings link from another app without forcing
+an Android package or activity. Unpublished pkb.rocks verification remains
+separate on Android 12 and later; Android 11 and earlier require all declared
+hosts to verify.
+
+Reference: [Android App Links verification](https://developer.android.com/training/app-links/verify-applinks).
