@@ -106,3 +106,18 @@ separate on Android 12 and later; Android 11 and earlier require all declared
 hosts to verify.
 
 Reference: [Android App Links verification](https://developer.android.com/training/app-links/verify-applinks).
+
+### Browser fallback for settings links
+
+GitHub Pages serves the custom 404 page for `/settings/<id>`. It recognizes
+the app's stable ID format and attempts `pastiera://setting/<id>` once per
+page load. A visible, ordinary anchor remains available when the browser blocks
+automatic opening. No package is forced, and returning from the app does not
+trigger another attempt. Other missing paths remain ordinary error pages.
+
+This supports future setting IDs without maintaining a second registry.
+Because GitHub Pages handles it through the error page, the HTTP status remains
+404 even when the settings fallback is shown. JavaScript is required to derive
+the link from the requested path; the page includes manual instructions without
+JavaScript. Test the built `404.html` at the original requested path, as Pages
+does, rather than redirecting the browser to `/404.html`.

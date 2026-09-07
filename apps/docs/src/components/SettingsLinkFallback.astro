@@ -1,0 +1,46 @@
+<div id="missing-page">
+  <p>This page could not be found.</p>
+  <p><a href="/">Back to Pastiera documentation</a></p>
+</div>
+
+<section id="setting-link" hidden aria-label="Open setting">
+  <p>Open this setting in the Pastiera app. If it does not open automatically, use the link below.</p>
+  <p><a id="open-setting">Open in Pastiera</a></p>
+  <p><a id="setting-address"></a></p>
+  <p><a href="/guides/getting-started/">Install or set up Pastiera</a></p>
+</section>
+
+<noscript>
+  <p>Automatic opening requires JavaScript. For a settings link, replace
+    <code>https://pastiera.eu/settings/</code> with <code>pastiera://setting/</code>,
+    keeping the setting ID.</p>
+</noscript>
+
+<script>
+  import { settingLinkForPath, tryOpenSetting } from '../lib/settings-link.mjs';
+
+  const link = settingLinkForPath(window.location.pathname);
+  if (link) {
+    const section = document.getElementById('setting-link');
+    const missing = document.getElementById('missing-page');
+    const heading = document.querySelector('h1');
+    for (const id of ['open-setting', 'setting-address']) {
+      document.getElementById(id)?.setAttribute('href', link);
+    }
+    document.getElementById('setting-address')!.textContent = link;
+    missing!.hidden = true;
+    section!.hidden = false;
+    if (heading) heading.textContent = 'Open in Pastiera';
+    document.title = 'Open setting | Pastiera';
+
+    // One attempt per page load. Do not retry on focus/visibility changes:
+    // returning from the app must leave the fallback link available.
+    // Keep the scheme package-neutral so Android can resolve installed variants.
+    tryOpenSetting(link, (target) => window.location.replace(target));
+  }
+</script>
+
+<style>
+  [hidden] { display: none !important; }
+  #setting-address { overflow-wrap: anywhere; }
+</style>
